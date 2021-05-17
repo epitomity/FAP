@@ -1,0 +1,2452 @@
+:root {
+    --white: rgba(255, 255, 255);
+    --color_assets_2: rgba(247, 246, 238, 255);
+    --color_assets_3: rgba(125, 58, 21, 255);
+    --black: rgba(0, 0, 0);
+    --color_assets_5: rgba(83, 153, 135, 255);
+    --color_assets_6: rgba(125, 133, 112, 255);
+    --color_assets_7: rgba(255, 159, 28, 255);
+    --color_assets_8: rgba(108, 150, 157, 255);
+    --color_assets_9: rgba(112, 112, 112, 255);
+    --color_assets_10: rgba(243, 244, 241, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+#Landing_Page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: rgba(252, 252, 252, 1);
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+#Footer {
+    position: absolute;
+    width: 1920px;
+    height: 346px;
+    left: 0px;
+    top: 6058px;
+    overflow: visible;
+}
+
+#Footer_d {
+    fill: rgba(247, 246, 238, 1);
+}
+
+.Footer_d {
+    position: absolute;
+    overflow: visible;
+    width: 1920px;
+    height: 346px;
+    left: 0px;
+    top: 0px;
+}
+
+#About_us__Our_history_Sourcing {
+    left: 151px;
+    top: 75px;
+    position: absolute;
+    overflow: visible;
+    width: 215px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Need_help__Get_in_touch_Freque {
+    left: 554px;
+    top: 75px;
+    position: absolute;
+    overflow: visible;
+    width: 257px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Instagram {
+    position: absolute;
+    width: 256px;
+    height: 95px;
+    left: 998px;
+    top: 75px;
+    overflow: visible;
+}
+
+#Follow_Luvamine_on_ {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 257px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Circle_Button {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    left: 0px;
+    top: 56px;
+    overflow: visible;
+}
+
+#Area {
+    fill: rgba(60, 60, 60, 1);
+}
+
+.Area {
+    position: absolute;
+    overflow: visible;
+    width: 39px;
+    height: 39px;
+    left: 0px;
+    top: 0px;
+}
+
+#Icon {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 11px;
+    top: 11px;
+    overflow: visible;
+}
+
+#Area_ei {
+    opacity: 0;
+    fill: rgba(252, 252, 252, 1);
+}
+
+.Area_ei {
+    position: absolute;
+    overflow: visible;
+    width: 17px;
+    height: 17px;
+    left: 0px;
+    top: 0px;
+}
+
+#Icon_ej {
+    position: absolute;
+    width: 14.154px;
+    height: 12.345px;
+    left: 1.424px;
+    top: 2.405px;
+    overflow: visible;
+}
+
+#Path {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgba(252, 252, 252, 1);
+    stroke-width: 1.6666666269302368px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Path {
+    overflow: visible;
+    position: absolute;
+    width: 15.82px;
+    height: 14.012px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Group_6 {
+    position: absolute;
+    width: 394px;
+    height: 172px;
+    left: 1426px;
+    top: 75px;
+    overflow: visible;
+}
+
+#Subscribe_to_our_Newsletter {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 350px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Enter_your_email_to_be_notifie {
+    left: 0px;
+    top: 54px;
+    position: absolute;
+    overflow: visible;
+    width: 395px;
+    height: 94px;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#List_Item {
+    position: absolute;
+    width: 394px;
+    height: 48px;
+    left: 0px;
+    top: 124px;
+    overflow: visible;
+}
+
+#Base {
+    opacity: 0;
+    fill: var(--white);
+}
+
+.Base {
+    position: absolute;
+    overflow: visible;
+    width: 394px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+}
+
+#Divider {
+    fill: transparent;
+    stroke: rgba(0, 0, 0, 1);
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Divider {
+    overflow: visible;
+    position: absolute;
+    width: 394px;
+    height: 2px;
+    left: 0px;
+    top: 47px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Label {
+    left: 12px;
+    top: 9px;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Reviews {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    left: 0px;
+    top: 4978px;
+    overflow: visible;
+}
+
+#Review_Background {
+    fill: var(--white);
+}
+
+.Review_Background {
+    position: absolute;
+    overflow: visible;
+    width: 1920px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+}
+
+#Review_Vertical_Line {
+    fill: transparent;
+    stroke: rgba(112, 112, 112, 1);
+    stroke-width: 3px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Review_Vertical_Line {
+    overflow: visible;
+    position: absolute;
+    width: 3.5px;
+    height: 879.002px;
+    left: 960px;
+    top: 100.5px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Reviews_Title {
+    left: 200px;
+    top: 100px;
+    position: absolute;
+    overflow: visible;
+    width: 374px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Rufina;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    color: var(--black);
+}
+
+#Scroll_Group_2 {
+    mix-blend-mode: normal;
+    position: absolute;
+    width: 757.5px;
+    height: 772.5px;
+    left: 1063px;
+    top: 150px;
+    overflow: hidden;
+}
+
+#Repeat_Grid_5 {
+    position: absolute;
+    width: 757.5px;
+    height: 1423.5px;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+}
+
+#Repeat_Grid_5_0 {
+    position: absolute;
+    width: 756.5px;
+    height: 708px;
+    left: 1px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Line_9 {
+    fill: transparent;
+    stroke: rgba(112, 112, 112, 1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_9 {
+    overflow: visible;
+    position: absolute;
+    width: 756px;
+    height: 1px;
+    left: 0px;
+    top: 708px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Review_Sample {
+    position: absolute;
+    width: 756px;
+    height: 128px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Area_e {
+    fill: var(--white);
+}
+
+.Area_e {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 760px;
+    height: 323px;
+    left: -4px;
+    top: 0px;
+}
+
+#Jamielle_R {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 160px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Reviewed_on_May_5_2021 {
+    left: 0px;
+    top: 51px;
+    position: absolute;
+    overflow: visible;
+    width: 178px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#About_Room__Linen_Spray_No_05_ {
+    left: 316px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 331px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#So_bangoooooo_huhu_same_na_sam {
+    left: 316px;
+    top: 60px;
+    position: absolute;
+    overflow: visible;
+    width: 441px;
+    height: 68px;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Line_8 {
+    fill: transparent;
+    stroke: rgba(112, 112, 112, 1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_8 {
+    overflow: visible;
+    position: absolute;
+    width: 756px;
+    height: 1px;
+    left: 0px;
+    top: 475px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Review_Sample_e {
+    position: absolute;
+    width: 756px;
+    height: 167px;
+    left: 0px;
+    top: 248px;
+    overflow: visible;
+}
+
+#Area_fa {
+    fill: var(--white);
+}
+
+.Area_fa {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 760px;
+    height: 323px;
+    left: -4px;
+    top: 0px;
+}
+
+#Jim_M {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 96px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Reviewed_on_May_5_2021_fb {
+    left: 0px;
+    top: 51px;
+    position: absolute;
+    overflow: visible;
+    width: 178px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#About_Love_in_Bloom_No_02_Autu {
+    left: 316px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 328px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#Thank_you_for_the_100_customer {
+    left: 316px;
+    top: 60px;
+    position: absolute;
+    overflow: visible;
+    width: 441px;
+    height: 107px;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Line_7 {
+    fill: transparent;
+    stroke: rgba(112, 112, 112, 1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_7 {
+    overflow: visible;
+    position: absolute;
+    width: 756px;
+    height: 1px;
+    left: 0.5px;
+    top: 188px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Review_Sample_ff {
+    position: absolute;
+    width: 756px;
+    height: 113px;
+    left: 0px;
+    top: 535px;
+    overflow: visible;
+}
+
+#Area_fg {
+    fill: var(--white);
+}
+
+.Area_fg {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 760px;
+    height: 323px;
+    left: -4px;
+    top: 0px;
+}
+
+#Jon_L {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 85px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Reviewed_on_May_5_2021_fi {
+    left: 0px;
+    top: 51px;
+    position: absolute;
+    overflow: visible;
+    width: 178px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#About_Eau_de_Parfum__No_04_Ren {
+    left: 316px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 300px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#Tried_it_na_Napakapango_I_supe {
+    left: 316px;
+    top: 40px;
+    position: absolute;
+    overflow: visible;
+    width: 441px;
+    height: 73px;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Repeat_Grid_5_1 {
+    position: absolute;
+    width: 756.5px;
+    height: 708px;
+    left: 1px;
+    top: 729px;
+    overflow: visible;
+}
+
+#Line_9_fm {
+    fill: transparent;
+    stroke: rgba(112, 112, 112, 1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_9_fm {
+    overflow: visible;
+    position: absolute;
+    width: 756px;
+    height: 1px;
+    left: 0px;
+    top: 708px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Review_Sample_fn {
+    position: absolute;
+    width: 756px;
+    height: 128px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Area_fo {
+    fill: var(--white);
+}
+
+.Area_fo {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 760px;
+    height: 323px;
+    left: -4px;
+    top: 0px;
+}
+
+#Jamielle_R_fp {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 160px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Reviewed_on_May_5_2021_fq {
+    left: 0px;
+    top: 51px;
+    position: absolute;
+    overflow: visible;
+    width: 178px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#About_Room__Linen_Spray_No_05__fr {
+    left: 316px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 331px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#So_bangoooooo_huhu_same_na_sam_fs {
+    left: 316px;
+    top: 60px;
+    position: absolute;
+    overflow: visible;
+    width: 441px;
+    height: 68px;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Line_8_ft {
+    fill: transparent;
+    stroke: rgba(112, 112, 112, 1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_8_ft {
+    overflow: visible;
+    position: absolute;
+    width: 756px;
+    height: 1px;
+    left: 0px;
+    top: 475px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Review_Sample_fu {
+    position: absolute;
+    width: 756px;
+    height: 167px;
+    left: 0px;
+    top: 248px;
+    overflow: visible;
+}
+
+#Area_fv {
+    fill: var(--white);
+}
+
+.Area_fv {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 760px;
+    height: 323px;
+    left: -4px;
+    top: 0px;
+}
+
+#Jim_M_fw {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 96px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Reviewed_on_May_5_2021_fx {
+    left: 0px;
+    top: 51px;
+    position: absolute;
+    overflow: visible;
+    width: 178px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#About_Love_in_Bloom_No_02_Autu_fy {
+    left: 316px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 328px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#Thank_you_for_the_100_customer_fz {
+    left: 316px;
+    top: 60px;
+    position: absolute;
+    overflow: visible;
+    width: 441px;
+    height: 107px;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Line_7_f {
+    fill: transparent;
+    stroke: rgba(112, 112, 112, 1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Line_7_f {
+    overflow: visible;
+    position: absolute;
+    width: 756px;
+    height: 1px;
+    left: 0.5px;
+    top: 188px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Review_Sample_f {
+    position: absolute;
+    width: 756px;
+    height: 113px;
+    left: 0px;
+    top: 535px;
+    overflow: visible;
+}
+
+#Area_f {
+    fill: var(--white);
+}
+
+.Area_f {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 760px;
+    height: 323px;
+    left: -4px;
+    top: 0px;
+}
+
+#Jon_L_f {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 85px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Reviewed_on_May_5_2021_f {
+    left: 0px;
+    top: 51px;
+    position: absolute;
+    overflow: visible;
+    width: 178px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#About_Eau_de_Parfum__No_04_Ren_f {
+    left: 316px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 300px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(112, 112, 112, 1);
+}
+
+#Tried_it_na_Napakapango_I_supe_f {
+    left: 316px;
+    top: 40px;
+    position: absolute;
+    overflow: visible;
+    width: 441px;
+    height: 73px;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Quote {
+    position: absolute;
+    width: 1920px;
+    height: 460px;
+    left: 0px;
+    top: 4518px;
+    overflow: visible;
+}
+
+#Path_6 {
+    fill: rgba(61, 61, 61, 1);
+}
+
+.Path_6 {
+    overflow: visible;
+    position: absolute;
+    width: 1920px;
+    height: 460px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Lorem_ipsum_dolor_sit_amet_con {
+    left: 367px;
+    top: 164px;
+    position: absolute;
+    overflow: visible;
+    width: 1187px;
+    height: 133px;
+    text-align: center;
+    font-family: Rufina;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: var(--white);
+}
+
+#Products {
+    position: absolute;
+    width: 1926px;
+    height: 3438px;
+    left: -6px;
+    top: 1080px;
+    overflow: visible;
+}
+
+#Products_Bg {
+    fill: var(--white);
+}
+
+.Products_Bg {
+    position: absolute;
+    overflow: visible;
+    width: 1926px;
+    height: 3438px;
+    left: 0px;
+    top: 0px;
+}
+
+#Product_Title {
+    left: 103px;
+    top: 75px;
+    position: absolute;
+    overflow: hidden;
+    width: 745px;
+    height: 342px;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Repeat_Grid_2 {
+    position: absolute;
+    width: 793px;
+    height: 3288px;
+    left: 968px;
+    top: 75px;
+    overflow: hidden;
+}
+
+#Group {
+    position: absolute;
+    width: 793px;
+    height: 513px;
+    left: 0px;
+    top: 1px;
+    overflow: visible;
+}
+
+#Product_Right {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 434px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Right {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Right {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Parfum-Amber-Wood_gh {
+    position: absolute;
+    width: 107.94px;
+    height: 325px;
+    left: 125.53px;
+    top: 95px;
+    overflow: visible;
+}
+
+#Eau_De_Parfum_60ml__-__350_Whi {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 290px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_gj {
+    position: absolute;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: -1px;
+    display: none;
+    overflow: visible;
+}
+
+#background_gk {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_gk {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 397px;
+}
+
+#background_gl {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_gl {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_gm {
+    left: 114px;
+    top: 407px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Products_Left {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Left_go {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Left_go {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Room-Spray-Amber-Wood_gp {
+    position: absolute;
+    width: 127.344px;
+    height: 400px;
+    left: 101.656px;
+    top: 25px;
+    overflow: visible;
+}
+
+#Room__Linen_Spray_200ml_-__300 {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 349px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_gr {
+    position: absolute;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    display: none;
+    overflow: visible;
+}
+
+#background_gs {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_gs {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 396px;
+}
+
+#background_gt {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_gt {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_gu {
+    left: 114px;
+    top: 406px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Group_gv {
+    position: absolute;
+    width: 793px;
+    height: 513px;
+    left: 0px;
+    top: 554px;
+    overflow: visible;
+}
+
+#Product_Right_gw {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 434px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Right_gx {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Right_gx {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Parfum-Amber-Wood_gy {
+    position: absolute;
+    width: 107.94px;
+    height: 325px;
+    left: 125.53px;
+    top: 95px;
+    overflow: visible;
+}
+
+#Eau_De_Parfum_60ml__-__350_Whi_gz {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 290px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_g {
+    position: absolute;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: -1px;
+    display: none;
+    overflow: visible;
+}
+
+#background_g {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_g {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 397px;
+}
+
+#background_ha {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_ha {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_g {
+    left: 114px;
+    top: 407px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Products_Left_g {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Left_g {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Left_g {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Room-Spray-Amber-Wood_g {
+    position: absolute;
+    width: 127.344px;
+    height: 400px;
+    left: 101.656px;
+    top: 25px;
+    overflow: visible;
+}
+
+#Room__Linen_Spray_200ml_-__300_g {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 349px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_ha {
+    position: absolute;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    display: none;
+    overflow: visible;
+}
+
+#background_hb {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_hb {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 396px;
+}
+
+#background_hc {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_hc {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_hb {
+    left: 114px;
+    top: 406px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Group_hc {
+    position: absolute;
+    width: 793px;
+    height: 513px;
+    left: 0px;
+    top: 1107px;
+    overflow: visible;
+}
+
+#Product_Right_hd {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 434px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Right_he {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Right_he {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Parfum-Amber-Wood_hf {
+    position: absolute;
+    width: 107.94px;
+    height: 325px;
+    left: 125.53px;
+    top: 95px;
+    overflow: visible;
+}
+
+#Eau_De_Parfum_60ml__-__350_Whi_hg {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 290px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_hh {
+    position: absolute;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: -1px;
+    display: none;
+    overflow: visible;
+}
+
+#background_hi {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_hi {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 397px;
+}
+
+#background_hj {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_hj {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_hk {
+    left: 114px;
+    top: 407px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Products_Left_hl {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Left_hm {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Left_hm {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Room-Spray-Amber-Wood_hn {
+    position: absolute;
+    width: 127.344px;
+    height: 400px;
+    left: 101.656px;
+    top: 25px;
+    overflow: visible;
+}
+
+#Room__Linen_Spray_200ml_-__300_ho {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 349px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_hp {
+    position: absolute;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    display: none;
+    overflow: visible;
+}
+
+#background_hq {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_hq {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 396px;
+}
+
+#background_hr {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_hr {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_hs {
+    left: 114px;
+    top: 406px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Group_ht {
+    position: absolute;
+    width: 793px;
+    height: 513px;
+    left: 0px;
+    top: 1660px;
+    overflow: visible;
+}
+
+#Product_Right_hu {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 434px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Right_hv {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Right_hv {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Parfum-Amber-Wood_hw {
+    position: absolute;
+    width: 107.94px;
+    height: 325px;
+    left: 125.53px;
+    top: 95px;
+    overflow: visible;
+}
+
+#Eau_De_Parfum_60ml__-__350_Whi_hx {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 290px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_hy {
+    position: absolute;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: -1px;
+    display: none;
+    overflow: visible;
+}
+
+#background_hz {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_hz {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 397px;
+}
+
+#background_h {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_h {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_h {
+    left: 114px;
+    top: 407px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Products_Left_h {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Left_h {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Left_h {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Room-Spray-Amber-Wood_h {
+    position: absolute;
+    width: 127.344px;
+    height: 400px;
+    left: 101.656px;
+    top: 25px;
+    overflow: visible;
+}
+
+#Room__Linen_Spray_200ml_-__300_h {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 349px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_h {
+    position: absolute;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    display: none;
+    overflow: visible;
+}
+
+#background_ia {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_ia {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 396px;
+}
+
+#background_ib {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_ib {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_ia {
+    left: 114px;
+    top: 406px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Group_ia {
+    position: absolute;
+    width: 793px;
+    height: 513px;
+    left: 0px;
+    top: 2213px;
+    overflow: visible;
+}
+
+#Product_Right_ib {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 434px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Right_ic {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Right_ic {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Parfum-Amber-Wood_id {
+    position: absolute;
+    width: 107.94px;
+    height: 325px;
+    left: 125.53px;
+    top: 95px;
+    overflow: visible;
+}
+
+#Eau_De_Parfum_60ml__-__350_Whi_ie {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 290px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_if {
+    position: absolute;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: -1px;
+    display: none;
+    overflow: visible;
+}
+
+#background_ig {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_ig {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 397px;
+}
+
+#background_ih {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_ih {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_ii {
+    left: 114px;
+    top: 407px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Products_Left_ij {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Left_ik {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Left_ik {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Room-Spray-Amber-Wood_il {
+    position: absolute;
+    width: 127.344px;
+    height: 400px;
+    left: 101.656px;
+    top: 25px;
+    overflow: visible;
+}
+
+#Room__Linen_Spray_200ml_-__300_im {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 349px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_in {
+    position: absolute;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    display: none;
+    overflow: visible;
+}
+
+#background_io {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_io {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 396px;
+}
+
+#background_ip {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_ip {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_iq {
+    left: 114px;
+    top: 406px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Group_ir {
+    position: absolute;
+    width: 793px;
+    height: 513px;
+    left: 0px;
+    top: 2766px;
+    overflow: visible;
+}
+
+#Product_Right_is {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 434px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Right_it {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Right_it {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Parfum-Amber-Wood_iu {
+    position: absolute;
+    width: 107.94px;
+    height: 325px;
+    left: 125.53px;
+    top: 95px;
+    overflow: visible;
+}
+
+#Eau_De_Parfum_60ml__-__350_Whi_iv {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 290px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_iw {
+    position: absolute;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: -1px;
+    display: none;
+    overflow: visible;
+}
+
+#background_ix {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_ix {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 397px;
+}
+
+#background_iy {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_iy {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 451px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_iz {
+    left: 114px;
+    top: 407px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Products_Left_i {
+    position: absolute;
+    width: 359px;
+    height: 513px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Product_Background_Left_i {
+    fill: rgba(243, 244, 241, 1);
+}
+
+.Product_Background_Left_i {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#Room-Spray-Amber-Wood_i {
+    position: absolute;
+    width: 127.344px;
+    height: 400px;
+    left: 101.656px;
+    top: 25px;
+    overflow: visible;
+}
+
+#Room__Linen_Spray_200ml_-__300_i {
+    left: 0px;
+    top: 458px;
+    position: absolute;
+    overflow: visible;
+    width: 349px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Kit_-_Button_ghost_hover_Defau_i {
+    position: absolute;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    display: none;
+    overflow: visible;
+}
+
+#background_i {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_i {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 54px;
+    left: 0px;
+    top: 396px;
+}
+
+#background_ja {
+    opacity: 0.3;
+    fill: rgba(0, 0, 0, 1);
+}
+
+.background_ja {
+    position: absolute;
+    overflow: visible;
+    width: 359px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+}
+
+#label_i {
+    left: 114px;
+    top: 406px;
+    position: absolute;
+    overflow: visible;
+    width: 133px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Title {
+    position: absolute;
+    width: 1920px;
+    height: 995px;
+    left: 0px;
+    top: 85px;
+    overflow: visible;
+}
+
+#Quote_Background {
+    position: absolute;
+    width: 1920px;
+    height: 995px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+#Shop_Now_Button {
+    position: absolute;
+    width: 174px;
+    height: 54px;
+    left: 960px;
+    top: 565px;
+    overflow: visible;
+}
+
+#Shop_Now_Button_Background {
+    fill: rgba(0, 0, 0, 1);
+    stroke: rgba(112, 112, 112, 1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Shop_Now_Button_Background {
+    position: absolute;
+    overflow: visible;
+    width: 175px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+}
+
+#Shop_Now_Button_Label {
+    text-decoration: none;
+    left: 20px;
+    top: 10px;
+    position: absolute;
+    overflow: visible;
+    width: 135px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--white);
+}
+
+#Iconic_scents_remade_for_every {
+    left: 960px;
+    top: 377px;
+    position: absolute;
+    overflow: visible;
+    width: 805px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Rufina;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    color: rgba(0, 0, 0, 1);
+}
+
+#Header {
+    position: fixed;
+    width: 100vw;
+    height: 85px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    background-color: var(--black);
+}
+
+#Luvamine-Logo-Black {
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 58.4px;
+    left: 756px;
+    top: 34px;
+    overflow: visible;
+}
+
+#Luvamine-Logo-White {
+    position: absolute;
+    width: 269.117px;
+    height: 39.291px;
+    left: 825.442px;
+    top: 22.854px;
+    overflow: visible;
+}
+
+.Header_Navbar {
+    position: absolute;
+    overflow: visible;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#Login_ji {
+    left: 1714px;
+    top: 29px;
+}
+
+#Cart {
+    left: 1823px;
+    top: 29px;
+}
+
+#Products_Header {
+    left: 58px;
+    top: 29px;
+}
+
+#Reviews_Header {
+    left: 199px;
+    top: 29px;
+}

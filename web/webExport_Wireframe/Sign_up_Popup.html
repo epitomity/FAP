@@ -1,3 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign-up Popup</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Sign-up Popup;
+		--web-view-id: Sign-up_Popup;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+		--web-is-overlay: true;
+	}
+	:root {
+		--web-view-ids: Sign-up_Popup;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Sign-up_Popup {
+		position: absolute;
+		width: 640px;
+		height: 995px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: Sign-up Popup;
+		--web-view-id: Sign-up_Popup;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+		--web-is-overlay: true;
+	}
+	@keyframes slide-left {
+	
+		0% {
+			transform: translateX(100%);
+		}
+	
+	}
+	#Rectangle_4 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4 {
+		position: absolute;
+		overflow: visible;
+		width: 540px;
+		height: 59px;
+		left: 50px;
+		top: 393px;
+	}
+	#Password_ {
+		left: 50px;
+		top: 346px;
+		position: absolute;
+		overflow: visible;
+		width: 91px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,1);
+	}
+	#Rectangle_3_ {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ {
+		position: absolute;
+		overflow: visible;
+		width: 540px;
+		height: 59px;
+		left: 50px;
+		top: 267px;
+	}
+	#Email_ {
+		left: 50px;
+		top: 220px;
+		position: absolute;
+		overflow: visible;
+		width: 51px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,1);
+	}
+	#Kit_-_Button_ghost_hover_Defau_ {
+		position: absolute;
+		width: 98px;
+		height: 34px;
+		left: 271px;
+		top: 898px;
+		overflow: visible;
+		cursor: pointer;
+		--web-animation: slide-left 0.3s ease-out forwards;
+		--web-action-type: page;
+		--web-action-target: Login_Popup.html;
+	}
+	#label_ {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 99px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		color: rgba(255,255,255,1);
+	}
+	#Rectangle_5 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_5 {
+		position: absolute;
+		overflow: visible;
+		width: 540px;
+		height: 59px;
+		left: 50px;
+		top: 519px;
+	}
+	#Confirm_Password {
+		left: 50px;
+		top: 472px;
+		position: absolute;
+		overflow: visible;
+		width: 173px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,1);
+	}
+	#Rectangle_7 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_7 {
+		position: absolute;
+		overflow: visible;
+		width: 540px;
+		height: 100px;
+		left: 50px;
+		top: 612px;
+	}
+	#Captcha_ {
+		left: 114px;
+		top: 650px;
+		position: absolute;
+		overflow: visible;
+		width: 65px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Noto Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16px;
+		color: rgba(62,62,62,1);
+	}
+	#What_is_shown_above {
+		left: 50px;
+		top: 733px;
+		position: absolute;
+		overflow: visible;
+		width: 156px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#Path_1 {
+		fill: rgba(0,0,0,0);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_1 {
+		overflow: visible;
+		position: absolute;
+		width: 540px;
+		height: 1px;
+		left: 50px;
+		top: 763px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Sign_Up {
+		left: 227px;
+		top: 100px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 50px;
+		color: rgba(0,0,0,1);
+	}
+	#Path_5 {
+		fill: rgba(0,0,0,0);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_5 {
+		overflow: visible;
+		position: absolute;
+		width: 3px;
+		height: 995px;
+		left: 1px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Error_Messages_bg {
+		left: 50px;
+		top: 782px;
+		position: absolute;
+		overflow: visible;
+		width: 145px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,0,0,1);
+	}
+	#Kit_-_Button_ghost_hover_Defau_bh {
+		position: absolute;
+		width: 119px;
+		height: 54px;
+		left: 261px;
+		top: 875px;
+		overflow: visible;
+	}
+	#background_bi {
+		fill: rgba(0,0,0,1);
+	}
+	.background_bi {
+		position: absolute;
+		overflow: visible;
+		width: 119px;
+		height: 54px;
+		left: 0px;
+		top: 0px;
+	}
+	#label_bj {
+		left: 21px;
+		top: 14px;
+		position: absolute;
+		overflow: visible;
+		width: 79px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
+</style>
+<script id="applicationScript">
 ///////////////////////////////////////
 // INITIALIZATION
 ///////////////////////////////////////
@@ -2834,3 +3140,69 @@ var Application = function() {
 }
 
 window.application = new Application();
+</script>
+</head>
+<body>
+<div id="Sign-up_Popup">
+	<svg class="Rectangle_4">
+		<rect id="Rectangle_4" rx="0" ry="0" x="0" y="0" width="540" height="59">
+		</rect>
+	</svg>
+	<div id="Password_">
+		<span>Password</span>
+	</div>
+	<svg class="Rectangle_3_">
+		<rect id="Rectangle_3_" rx="0" ry="0" x="0" y="0" width="540" height="59">
+		</rect>
+	</svg>
+	<div id="Email_">
+		<span>Email</span>
+	</div>
+	<div onclick="application.showOverlay(event,'Login_Popup',0,0)" id="Kit_-_Button_ghost_hover_Defau_">
+		<div id="label_">
+			<span>SIGN UP</span>
+		</div>
+	</div>
+	<svg class="Rectangle_5">
+		<rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="540" height="59">
+		</rect>
+	</svg>
+	<div id="Confirm_Password">
+		<span>Confirm Password</span>
+	</div>
+	<svg class="Rectangle_7">
+		<rect id="Rectangle_7" rx="0" ry="0" x="0" y="0" width="540" height="100">
+		</rect>
+	</svg>
+	<div id="Captcha_">
+		<span>Captcha</span><br>
+	</div>
+	<div id="What_is_shown_above">
+		<span>What is shown above?</span>
+	</div>
+	<svg class="Path_1" viewBox="0 0 540 1">
+		<path id="Path_1" d="M 0 0 L 540 0">
+		</path>
+	</svg>
+	<div id="Sign_Up">
+		<span>Sign Up</span>
+	</div>
+	<svg class="Path_5" viewBox="0 0 3 995">
+		<path id="Path_5" d="M 0 0 L 0 530.537109375 L 0 995">
+		</path>
+	</svg>
+	<div id="Error_Messages_bg">
+		<span>Error Messages</span>
+	</div>
+	<div id="Kit_-_Button_ghost_hover_Defau_bh">
+		<svg class="background_bi">
+			<rect id="background_bi" rx="0" ry="0" x="0" y="0" width="119" height="54">
+			</rect>
+		</svg>
+		<div id="label_bj">
+			<span>SIGN UP</span>
+		</div>
+	</div>
+</div>
+</body>
+</html>
