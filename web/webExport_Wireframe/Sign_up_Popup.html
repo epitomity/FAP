@@ -34,102 +34,112 @@
 		--web-enable-deep-linking: true;
 		--web-is-overlay: true;
 	}
-	@keyframes slide-left {
-	
-		0% {
-			transform: translateX(100%);
-		}
-	
-	}
-	#Rectangle_4 {
-		fill: transparent;
-		stroke: rgba(112,112,112,1);
-		stroke-width: 1px;
+	#Seperator_Line {
+		fill: rgba(0,0,0,0);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 3px;
 		stroke-linejoin: miter;
 		stroke-linecap: butt;
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.Rectangle_4 {
+	.Seperator_Line {
+		overflow: visible;
+		position: absolute;
+		width: 3px;
+		height: 995px;
+		left: 1px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Sign_Up_Button {
+		position: absolute;
+		width: 119px;
+		height: 54px;
+		left: 261px;
+		top: 875px;
+		overflow: visible;
+	}
+	#background_ {
+		fill: rgba(0,0,0,1);
+	}
+	.background_ {
 		position: absolute;
 		overflow: visible;
-		width: 540px;
-		height: 59px;
-		left: 50px;
-		top: 393px;
-	}
-	#Password_ {
-		left: 50px;
-		top: 346px;
-		position: absolute;
-		overflow: visible;
-		width: 91px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Open Sans;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 20px;
-		color: rgba(0,0,0,1);
-	}
-	#Rectangle_3_ {
-		fill: transparent;
-		stroke: rgba(112,112,112,1);
-		stroke-width: 1px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Rectangle_3_ {
-		position: absolute;
-		overflow: visible;
-		width: 540px;
-		height: 59px;
-		left: 50px;
-		top: 267px;
-	}
-	#Email_ {
-		left: 50px;
-		top: 220px;
-		position: absolute;
-		overflow: visible;
-		width: 51px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Open Sans;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 20px;
-		color: rgba(0,0,0,1);
-	}
-	#Kit_-_Button_ghost_hover_Defau_ {
-		position: absolute;
-		width: 98px;
-		height: 34px;
-		left: 271px;
-		top: 898px;
-		overflow: visible;
-		cursor: pointer;
-		--web-animation: slide-left 0.3s ease-out forwards;
-		--web-action-type: page;
-		--web-action-target: Login_Popup.html;
-	}
-	#label_ {
+		width: 119px;
+		height: 54px;
 		left: 0px;
 		top: 0px;
+	}
+	#label_ {
+		left: 21px;
+		top: 14px;
 		position: absolute;
 		overflow: visible;
-		width: 99px;
+		width: 79px;
 		white-space: nowrap;
 		text-align: center;
 		font-family: Open Sans;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 25px;
+		font-size: 20px;
 		color: rgba(255,255,255,1);
 	}
-	#Rectangle_5 {
+	#Error_Messages_ {
+		left: 50px;
+		top: 782px;
+		position: absolute;
+		overflow: visible;
+		width: 145px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,0,0,1);
+	}
+	#Captcha {
+		position: absolute;
+		width: 540px;
+		height: 151px;
+		left: 50px;
+		top: 612px;
+		overflow: visible;
+	}
+	#Captcha_Input {
+		fill: rgba(0,0,0,0);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Captcha_Input {
+		overflow: visible;
+		position: absolute;
+		width: 540px;
+		height: 1px;
+		left: 0px;
+		top: 151px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#What_is_shown_above {
+		left: 0px;
+		top: 121px;
+		position: absolute;
+		overflow: visible;
+		width: 156px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(0,0,0,1);
+	}
+	#Captcha_Area {
 		fill: transparent;
 		stroke: rgba(112,112,112,1);
 		stroke-width: 1px;
@@ -138,7 +148,24 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.Rectangle_5 {
+	.Captcha_Area {
+		position: absolute;
+		overflow: visible;
+		width: 540px;
+		height: 100px;
+		left: 0px;
+		top: 0px;
+	}
+	#Confirm_Password_Area {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Confirm_Password_Area {
 		position: absolute;
 		overflow: visible;
 		width: 540px;
@@ -160,7 +187,7 @@
 		font-size: 20px;
 		color: rgba(0,0,0,1);
 	}
-	#Rectangle_7 {
+	#Password_Area {
 		fill: transparent;
 		stroke: rgba(112,112,112,1);
 		stroke-width: 1px;
@@ -169,44 +196,30 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.Rectangle_7 {
+	.Password_Area {
 		position: absolute;
 		overflow: visible;
 		width: 540px;
-		height: 100px;
+		height: 59px;
 		left: 50px;
-		top: 612px;
+		top: 393px;
 	}
-	#Captcha_ {
-		left: 114px;
-		top: 650px;
+	#Password_be {
+		left: 50px;
+		top: 346px;
 		position: absolute;
 		overflow: visible;
-		width: 65px;
+		width: 91px;
 		white-space: nowrap;
-		text-align: left;
-		font-family: Noto Sans;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 16px;
-		color: rgba(62,62,62,1);
-	}
-	#What_is_shown_above {
-		left: 50px;
-		top: 733px;
-		position: absolute;
-		overflow: visible;
-		width: 156px;
-		white-space: nowrap;
-		text-align: left;
+		text-align: center;
 		font-family: Open Sans;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 15px;
+		font-size: 20px;
 		color: rgba(0,0,0,1);
 	}
-	#Path_1 {
-		fill: rgba(0,0,0,0);
+	#Email_Area {
+		fill: transparent;
 		stroke: rgba(112,112,112,1);
 		stroke-width: 1px;
 		stroke-linejoin: miter;
@@ -214,14 +227,27 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.Path_1 {
-		overflow: visible;
+	.Email_Area {
 		position: absolute;
+		overflow: visible;
 		width: 540px;
-		height: 1px;
+		height: 59px;
 		left: 50px;
-		top: 763px;
-		transform: matrix(1,0,0,1,0,0);
+		top: 267px;
+	}
+	#Email_bg {
+		left: 50px;
+		top: 220px;
+		position: absolute;
+		overflow: visible;
+		width: 51px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,1);
 	}
 	#Sign_Up {
 		left: 227px;
@@ -236,71 +262,6 @@
 		font-weight: bold;
 		font-size: 50px;
 		color: rgba(0,0,0,1);
-	}
-	#Path_5 {
-		fill: rgba(0,0,0,0);
-		stroke: rgba(0,0,0,1);
-		stroke-width: 3px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_5 {
-		overflow: visible;
-		position: absolute;
-		width: 3px;
-		height: 995px;
-		left: 1px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Error_Messages_bg {
-		left: 50px;
-		top: 782px;
-		position: absolute;
-		overflow: visible;
-		width: 145px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Open Sans;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 20px;
-		color: rgba(255,0,0,1);
-	}
-	#Kit_-_Button_ghost_hover_Defau_bh {
-		position: absolute;
-		width: 119px;
-		height: 54px;
-		left: 261px;
-		top: 875px;
-		overflow: visible;
-	}
-	#background_bi {
-		fill: rgba(0,0,0,1);
-	}
-	.background_bi {
-		position: absolute;
-		overflow: visible;
-		width: 119px;
-		height: 54px;
-		left: 0px;
-		top: 0px;
-	}
-	#label_bj {
-		left: 21px;
-		top: 14px;
-		position: absolute;
-		overflow: visible;
-		width: 79px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Open Sans;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 20px;
-		color: rgba(255,255,255,1);
 	}
 </style>
 <script id="applicationScript">
@@ -3144,64 +3105,58 @@ window.application = new Application();
 </head>
 <body>
 <div id="Sign-up_Popup">
-	<svg class="Rectangle_4">
-		<rect id="Rectangle_4" rx="0" ry="0" x="0" y="0" width="540" height="59">
-		</rect>
+	<svg class="Seperator_Line" viewBox="0 0 3 995">
+		<path id="Seperator_Line" d="M 0 0 L 0 530.537109375 L 0 995">
+		</path>
 	</svg>
-	<div id="Password_">
-		<span>Password</span>
-	</div>
-	<svg class="Rectangle_3_">
-		<rect id="Rectangle_3_" rx="0" ry="0" x="0" y="0" width="540" height="59">
-		</rect>
-	</svg>
-	<div id="Email_">
-		<span>Email</span>
-	</div>
-	<div onclick="application.showOverlay(event,'Login_Popup',0,0)" id="Kit_-_Button_ghost_hover_Defau_">
+	<div id="Sign_Up_Button">
+		<svg class="background_">
+			<rect id="background_" rx="0" ry="0" x="0" y="0" width="119" height="54">
+			</rect>
+		</svg>
 		<div id="label_">
 			<span>SIGN UP</span>
 		</div>
 	</div>
-	<svg class="Rectangle_5">
-		<rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="540" height="59">
+	<div id="Error_Messages_">
+		<span>Error Messages</span>
+	</div>
+	<div id="Captcha">
+		<svg class="Captcha_Input" viewBox="0 0 540 1">
+			<path id="Captcha_Input" d="M 0 0 L 540 0">
+			</path>
+		</svg>
+		<div id="What_is_shown_above">
+			<span>What is shown above?</span>
+		</div>
+		<svg class="Captcha_Area">
+			<rect id="Captcha_Area" rx="0" ry="0" x="0" y="0" width="540" height="100">
+			</rect>
+		</svg>
+	</div>
+	<svg class="Confirm_Password_Area">
+		<rect id="Confirm_Password_Area" rx="0" ry="0" x="0" y="0" width="540" height="59">
 		</rect>
 	</svg>
 	<div id="Confirm_Password">
 		<span>Confirm Password</span>
 	</div>
-	<svg class="Rectangle_7">
-		<rect id="Rectangle_7" rx="0" ry="0" x="0" y="0" width="540" height="100">
+	<svg class="Password_Area">
+		<rect id="Password_Area" rx="0" ry="0" x="0" y="0" width="540" height="59">
 		</rect>
 	</svg>
-	<div id="Captcha_">
-		<span>Captcha</span><br>
+	<div id="Password_be">
+		<span>Password</span>
 	</div>
-	<div id="What_is_shown_above">
-		<span>What is shown above?</span>
-	</div>
-	<svg class="Path_1" viewBox="0 0 540 1">
-		<path id="Path_1" d="M 0 0 L 540 0">
-		</path>
+	<svg class="Email_Area">
+		<rect id="Email_Area" rx="0" ry="0" x="0" y="0" width="540" height="59">
+		</rect>
 	</svg>
+	<div id="Email_bg">
+		<span>Email</span>
+	</div>
 	<div id="Sign_Up">
 		<span>Sign Up</span>
-	</div>
-	<svg class="Path_5" viewBox="0 0 3 995">
-		<path id="Path_5" d="M 0 0 L 0 530.537109375 L 0 995">
-		</path>
-	</svg>
-	<div id="Error_Messages_bg">
-		<span>Error Messages</span>
-	</div>
-	<div id="Kit_-_Button_ghost_hover_Defau_bh">
-		<svg class="background_bi">
-			<rect id="background_bi" rx="0" ry="0" x="0" y="0" width="119" height="54">
-			</rect>
-		</svg>
-		<div id="label_bj">
-			<span>SIGN UP</span>
-		</div>
 	</div>
 </div>
 </body>

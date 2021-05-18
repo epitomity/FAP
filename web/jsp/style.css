@@ -1,15 +1,9 @@
 :root {
     --white: rgba(255, 255, 255);
-    --color_assets_2: rgba(247, 246, 238, 255);
-    --color_assets_3: rgba(125, 58, 21, 255);
+    --dark_gray: #3D3D3D;
+    --grey: #495057;
     --black: rgba(0, 0, 0);
     --light_gray: #F3F4F1;
-    --color_assets_5: rgba(83, 153, 135, 255);
-    --color_assets_6: rgba(125, 133, 112, 255);
-    --color_assets_7: rgba(255, 159, 28, 255);
-    --color_assets_8: rgba(108, 150, 157, 255);
-    --color_assets_9: rgba(112, 112, 112, 255);
-    --color_assets_10: rgba(243, 244, 241, 255);
 }
 
 @font-face {
@@ -20,6 +14,10 @@
 @font-face {
     font-family: Open Sans;
     src: url(https://fonts.google.com/specimen/Open+Sans);
+}
+
+button:focus {
+    outline: none;
 }
 
 #Header {
@@ -33,6 +31,11 @@
     color: var(--white);
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.header_button {
+    background-color: var(--black);
+    border: none;
 }
 
 ul.nav a:hover {
@@ -83,8 +86,11 @@ ul.nav a:hover {
 }
 
 #Product_Title {
+    position: sticky;
     margin-left: 100px;
     margin-top: 75px;
+    margin-bottom: 75px;
+    top: 125px;
     text-align: left;
     font-family: Open Sans;
     font-size: 25px;
@@ -93,18 +99,144 @@ ul.nav a:hover {
 }
 
 #Product_col {
-    padding: 60px;
+    padding: 60px 100px 60px 100px;
 }
 
 #Product_container {
-    padding: 20px;
-    margin: 30px;
+    padding: 0px;
+    margin: 0px 0px 70px 0px;
 }
 
 .Product_Image {
-    height: 275px;
+    height: 250px;
+}
+
+.Product_Image.parfum {
+    margin-top: 50px;
+    height: 200px;
+}
+
+.Product_Image.room-spray {
+    padding-right: 25px;
 }
 
 .bg-product {
     background-color: var(--light_gray);
+}
+
+.product-description {
+    margin-top: 35px;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-img-container {
+    margin: 0px 10px 0px 10px;
+    height: 300px;
+    width: 250px;
+    padding: 20px 0px 20px 0px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 75%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.product-img-container:hover .overlay {
+    opacity: 1;
+}
+
+#Quote_Break {
+    height: 40vh;
+    background-color: var(--dark_gray);
+}
+
+.modal-dialog,
+.modal.right .modal-dialog {
+    margin: 0;
+    width: 30vw;
+    position: fixed;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+@media screen and (max-width: 1000px) {
+    .modal-dialog,
+    .modal.right .modal-dialog {
+        width: 75vw;
+    }
+}
+
+.modal-content,
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal-body,
+.modal.right .modal-body {
+    padding: 35px;
+}
+
+.modal.right.fade .modal-dialog {
+    right: -50%;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+    right: 0px;
+}
+
+.modal-content {
+    border-radius: 0;
+    border: none;
+}
+
+.LoginSignUpHeader {
+    margin: 50px 0px 50px 0px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.form-group {
+    font-family: Open Sans;
+    font-size: 15px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+#Captcha_Signup {
+    border: none;
+    border-bottom: 1px solid var(--grey)
+}
+
+.Login_Signup_Button {
+    background-color: var(--black);
+    border: none;
+}
+
+.Login_Signup_Button.btn-primary:hover {
+    background-color: var(--gray);
+}
+
+#Login_Signup {
+    color: var(--black);
+    font-size: 12px;
 }

@@ -12,6 +12,11 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- JS library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css" />
 </head>
 
@@ -29,10 +34,10 @@
                 <a class="nav-link" href="#"><img id="Luvamine-Logo-White" src="imageAssets/Luvamine-Logo-White.png"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <button class="nav-link header_button" data-toggle="modal" data-target="#LoginModal">Login</button>
             </li>
             <li class="nav-item pr-4">
-                <a class="nav-link" href="#">Card</a>
+                <button class="nav-link header_button" data-toggle="modal" data-target="#CartModal">Cart</button>
             </li>
         </ul>
 
@@ -64,69 +69,188 @@
 
                     <div class="container">
                         <div class="row">
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Parfum-Ethereal.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image parfum" src="imageAssets/Parfum-Ethereal.png">
+                                    <div class="overlay"></div>
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Ethereal</p>
+                                </div>
                             </div>
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Room-Spray-Autumn-Bloom.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Autumn-Bloom.png">
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Autumn Bloom</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="container">
                         <div class="row">
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Parfum-Ethereal.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image parfum" src="imageAssets/Parfum-Autumn-Bloom.png">
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Autumn Bloom</p>
+                                </div>
+
                             </div>
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Room-Spray-Autumn-Bloom.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Amber-Wood.png">
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Amber Wood</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="container">
                         <div class="row">
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Parfum-Ethereal.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image parfum" src="imageAssets/Parfum-Amber-Wood.png">
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Amber Wood</p>
+                                </div>
+
                             </div>
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Room-Spray-Autumn-Bloom.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Rendezvous.png">
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Rendezvous</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="container">
                         <div class="row">
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Parfum-Ethereal.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image parfum" src="imageAssets/Room-Spray-Rendezvous.png">
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Rendezvous</p>
+                                </div>
+
                             </div>
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Room-Spray-Autumn-Bloom.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Green-Tea-Lush.png">
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Green Tea Lush</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="container">
                         <div class="row">
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Parfum-Ethereal.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image parfum" src="imageAssets/Parfum-Green-Tea-Lush.png">
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Green Tea Lush</p>
+                                </div>
+
                             </div>
-                            <div id="Product_container" class="col bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Room-Spray-Autumn-Bloom.png">
+                            <div id="Product_container" class="col" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Peach-Blossom.png">
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Peach Blossom</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="container">
                         <div class="row">
-                            <div id="Product_container" class="col-5 bg-product" align="center">
-                                <img class="Product_Image" src="imageAssets/Parfum-Ethereal.png">
+                            <div id="Product_container" class="col-6" align="center">
+                                <div class="bg-product product-img-container">
+                                    <img class="Product_Image room-spray" src="imageAssets/Room-Spray-White-Tea-_-Sage.png">
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>White Tea & Sage</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div id="Quote_Break" class="container-fluid">
+
+        </div>
+
+        <div>
+            <!-- Login Modal -->
+            <div class="modal right fade" id="LoginModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h1 class="text-center LoginSignUpHeader">Login</h1>
+                            <form>
+                                <div class="form-group">
+                                    <label for="Email_Input_Login">Email</label>
+                                    <input type="email" class="form-control" id="Email_Input_Login">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password_Input_Login">Password</label>
+                                    <input type="password" class="form-control" id="Password_Input_Login">
+                                </div>
+                                Error Messages
+                                <div class="d-flex flex-column justify-content-center mt-5">
+                                    <a id="Login_Signup" class="text-center mb-3 text-decoration-none" data-dismiss="modal" data-toggle="modal" href="#SignupModal">Create Account</a>
+                                    <button type="submit" id="Login_Submit" class="btn btn-primary Login_Signup_Button">Submit</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- modal-content -->
+                </div>
+                <!-- modal-dialog -->
+            </div>
+            <!-- modal -->
+        </div>
+
+        <div>
+            <!-- Sign Up Modal -->
+            <div class="modal right fade" id="SignupModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h1 class="text-center LoginSignUpHeader">Sign Up</h1>
+                            <form>
+                                <div class="form-group">
+                                    <label for="Email_Input_Signup">Email</label>
+                                    <input type="email" class="form-control" id="Email_Input_Signup">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password_Input_Signup">Password</label>
+                                    <input type="text" class="form-control" id="Password_Input_Signup">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ConfirmPassword_Signup">Confirm Password</label>
+                                    <input type="text" class="form-control" id="ConfirmPassword_Signup">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="Captcha_Signup" placeholder="What is being shown above?">
+                                </div>
+                                Error Messages
+                                <div class="d-flex flex-column justify-content-center mt-5">
+                                    <button type="submit" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Submit</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- modal-content -->
+                </div>
+                <!-- modal-dialog -->
+            </div>
+            <!-- modal -->
+        </div>
+
 
     </div>
 </body>

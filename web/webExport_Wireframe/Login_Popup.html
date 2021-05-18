@@ -51,84 +51,25 @@
 		}
 	
 	}
-	#Login {
-		left: 252px;
-		top: 100px;
-		position: absolute;
-		overflow: visible;
-		width: 137px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Open Sans;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 50px;
-		color: rgba(0,0,0,1);
-	}
-	#Email {
-		left: 50px;
-		top: 221px;
-		position: absolute;
-		overflow: visible;
-		width: 51px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Open Sans;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 20px;
-		color: rgba(0,0,0,1);
-	}
-	#Password {
-		left: 50px;
-		top: 347px;
-		position: absolute;
-		overflow: visible;
-		width: 91px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Open Sans;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 20px;
-		color: rgba(0,0,0,1);
-	}
-	#Rectangle_3 {
+	#Line_2 {
 		fill: transparent;
-		stroke: rgba(112,112,112,1);
-		stroke-width: 1px;
+		stroke: rgba(0,0,0,1);
+		stroke-width: 3px;
 		stroke-linejoin: miter;
 		stroke-linecap: butt;
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.Rectangle_3 {
-		position: absolute;
-		overflow: visible;
-		width: 540px;
-		height: 59px;
-		left: 50px;
-		top: 268px;
-	}
-	#Path_2 {
-		fill: transparent;
-		stroke: rgba(112,112,112,1);
-		stroke-width: 1px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Path_2 {
+	.Line_2 {
 		overflow: visible;
 		position: absolute;
-		width: 540px;
-		height: 59px;
-		left: 50px;
-		top: 394px;
+		width: 3px;
+		height: 995px;
+		left: 1.5px;
+		top: 0px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#Kit_-_Button_ghost_hover_Defau {
+	#Login_Button {
 		position: absolute;
 		width: 119px;
 		height: 54px;
@@ -183,24 +124,6 @@
 		font-size: 15px;
 		color: rgba(0,0,0,1);
 	}
-	#Line_2 {
-		fill: transparent;
-		stroke: rgba(0,0,0,1);
-		stroke-width: 3px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.Line_2 {
-		overflow: visible;
-		position: absolute;
-		width: 3px;
-		height: 995px;
-		left: 1.5px;
-		top: 0px;
-		transform: matrix(1,0,0,1,0,0);
-	}
 	#Error_Messages {
 		left: 50px;
 		top: 472px;
@@ -214,6 +137,83 @@
 		font-weight: normal;
 		font-size: 20px;
 		color: rgba(255,0,0,1);
+	}
+	#Path_2 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_2 {
+		overflow: visible;
+		position: absolute;
+		width: 540px;
+		height: 59px;
+		left: 50px;
+		top: 394px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Password {
+		left: 50px;
+		top: 347px;
+		position: absolute;
+		overflow: visible;
+		width: 91px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,1);
+	}
+	#Rectangle_3 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3 {
+		position: absolute;
+		overflow: visible;
+		width: 540px;
+		height: 59px;
+		left: 50px;
+		top: 268px;
+	}
+	#Email {
+		left: 50px;
+		top: 221px;
+		position: absolute;
+		overflow: visible;
+		width: 51px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,1);
+	}
+	#Login {
+		left: 252px;
+		top: 100px;
+		position: absolute;
+		overflow: visible;
+		width: 137px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Open Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 50px;
+		color: rgba(0,0,0,1);
 	}
 </style>
 <script id="applicationScript">
@@ -3057,24 +3057,11 @@ window.application = new Application();
 </head>
 <body>
 <div id="Login_Popup">
-	<div id="Login">
-		<span>Login</span>
-	</div>
-	<div id="Email">
-		<span>Email</span>
-	</div>
-	<div id="Password">
-		<span>Password</span>
-	</div>
-	<svg class="Rectangle_3">
-		<rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="540" height="59">
-		</rect>
-	</svg>
-	<svg class="Path_2" viewBox="0 0 540 59">
-		<path id="Path_2" d="M 0 0 L 46.01693344116211 0 L 540 0 L 540 59 L 0 59 L 0 0 Z">
+	<svg class="Line_2" viewBox="0 0 3 995">
+		<path id="Line_2" d="M 0 0 L 0 995">
 		</path>
 	</svg>
-	<div onclick="application.goToTargetView(event)" id="Kit_-_Button_ghost_hover_Defau">
+	<div onclick="application.goToTargetView(event)" id="Login_Button">
 		<svg class="background">
 			<rect id="background" rx="0" ry="0" x="0" y="0" width="119" height="54">
 			</rect>
@@ -3086,12 +3073,25 @@ window.application = new Application();
 	<div onclick="application.showOverlay(event,'Sign-up_Popup',0,0)" id="Create_Account">
 		<span>Create Account</span>
 	</div>
-	<svg class="Line_2" viewBox="0 0 3 995">
-		<path id="Line_2" d="M 0 0 L 0 995">
-		</path>
-	</svg>
 	<div id="Error_Messages">
 		<span>Error Messages</span>
+	</div>
+	<svg class="Path_2" viewBox="0 0 540 59">
+		<path id="Path_2" d="M 0 0 L 46.01693344116211 0 L 540 0 L 540 59 L 0 59 L 0 0 Z">
+		</path>
+	</svg>
+	<div id="Password">
+		<span>Password</span>
+	</div>
+	<svg class="Rectangle_3">
+		<rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="540" height="59">
+		</rect>
+	</svg>
+	<div id="Email">
+		<span>Email</span>
+	</div>
+	<div id="Login">
+		<span>Login</span>
 	</div>
 </div>
 </body>
