@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    
+    <%@page contentType="text/html" pageEncoding="UTF-8"%>
+    
     <meta charset="utf-8" />
     <title>Luvamine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,14 +75,16 @@
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image parfum" src="jsp/imageAssets/Parfum-Ethereal.png">
+                                    <p id="Add_to_Cart">hatdog</p>
                                     <div class="overlay"></div>
-                                    <p class="text-left product-description">Eau De Parfum (60ml) - ? 350<br>Ethereal</p>
+                                    
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Ethereal</p>
                                 </div>
                             </div>
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image room-spray" src="jsp/imageAssets/Room-Spray-Autumn-Bloom.png">
-                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ? 300<br>Autumn Bloom</p>
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Autumn Bloom</p>
                                 </div>
 
                             </div>
@@ -91,14 +96,14 @@
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image parfum" src="jsp/imageAssets/Parfum-Autumn-Bloom.png">
-                                    <p class="text-left product-description">Eau De Parfum (60ml) - ? 350<br>Autumn Bloom</p>
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Autumn Bloom</p>
                                 </div>
 
                             </div>
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image room-spray" src="jsp/imageAssets/Room-Spray-Amber-Wood.png">
-                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ? 300<br>Amber Wood</p>
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Amber Wood</p>
                                 </div>
 
                             </div>
@@ -110,14 +115,14 @@
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image parfum" src="jsp/imageAssets/Parfum-Amber-Wood.png">
-                                    <p class="text-left product-description">Eau De Parfum (60ml) - ? 350<br>Amber Wood</p>
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Amber Wood</p>
                                 </div>
 
                             </div>
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image room-spray" src="jsp/imageAssets/Room-Spray-Rendezvous.png">
-                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ? 300<br>Rendezvous</p>
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Rendezvous</p>
                                 </div>
 
                             </div>
@@ -129,14 +134,14 @@
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image parfum" src="jsp/imageAssets/Room-Spray-Rendezvous.png">
-                                    <p class="text-left product-description">Eau De Parfum (60ml) - ? 350<br>Rendezvous</p>
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Rendezvous</p>
                                 </div>
 
                             </div>
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image room-spray" src="jsp/imageAssets/Room-Spray-Green-Tea-Lush.png">
-                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ? 300<br>Green Tea Lush</p>
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Green Tea Lush</p>
                                 </div>
 
                             </div>
@@ -148,14 +153,14 @@
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image parfum" src="jsp/imageAssets/Parfum-Green-Tea-Lush.png">
-                                    <p class="text-left product-description">Eau De Parfum (60ml) - ? 350<br>Green Tea Lush</p>
+                                    <p class="text-left product-description">Eau De Parfum (60ml) - ₱ 350<br>Green Tea Lush</p>
                                 </div>
 
                             </div>
                             <div id="Product_container" class="col" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image room-spray" src="jsp/imageAssets/Room-Spray-Peach-Blossom.png">
-                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ? 300<br>Peach Blossom</p>
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>Peach Blossom</p>
                                 </div>
 
                             </div>
@@ -167,7 +172,7 @@
                             <div id="Product_container" class="col-6" align="center">
                                 <div class="bg-product product-img-container">
                                     <img class="Product_Image room-spray" src="jsp/imageAssets/Room-Spray-White-Tea-_-Sage.png">
-                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ? 300<br>White Tea & Sage</p>
+                                    <p class="text-left product-description">Room & Linen Spray (200ml) - ₱ 300<br>White Tea & Sage</p>
                                 </div>
 
                             </div>
