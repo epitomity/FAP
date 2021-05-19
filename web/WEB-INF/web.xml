@@ -11,6 +11,6 @@
     </session-config>
     <!-- Welcome File -->
     <welcome-file-list>
-        <welcome-file>LandingPage.jsp</welcome-file>
+        <welcome-file>jsp/LandingPage.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
