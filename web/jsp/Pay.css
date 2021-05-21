@@ -8,8 +8,6 @@ body{
     margin-top: 6.4rem;
     align-items: center;
     justify-content: center;
-    
-        
 
 }
 .ThankYou{
@@ -17,25 +15,30 @@ body{
     font-size: 6.25rem;
     font-family: Rufina; 
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+@media screen and (max-width: 480px) {
+  .ThankYou {
+    font-size: 4em;
+  }
 }
 .OrderPlaced{
     margin-top: 2rem;
     margin-bottom:  3rem;
     font-family: Open Sans; 
     font-size: 	2.5rem;
-    text-align: center
-        padding-left: 20px;
-    padding-right: 20px;
+    text-align: center;
+        padding-left: 1.25rem;
+    padding-right: 1.25rem;
 
 }
 .OtherTextThankYou{
     font-family: Open Sans; 
     font-size: 1.25rem;
-    text-align: center
-        padding-left: 20px;
-    padding-right: 20px;
+    text-align: center;
+        padding-left: 1.25rem;
+    padding-right: 1.25rem;
 
 }
 .DownloadPDFText{
@@ -43,8 +46,8 @@ body{
     font-size: 1.25rem;
     text-align: center;
     margin-top: 2.5rem;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
         
 }
 .VisitAccText{
@@ -52,8 +55,8 @@ body{
     font-size: 1.25rem;
     text-align: center;
     margin-top: 2.5rem;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1.25rem;
+    padding-right:1.25rem;
 }
 #profile{
 width: 95px;
@@ -78,4 +81,16 @@ width: 95px;
 }
 .HeartWithCircle{
     padding-right: 2rem;
+}
+#PaymentDetails{
+   margin-top:3.5rem;
+
+}
+#PaymentInformation{
+   background-color: #f7f6ee;
+
+    
+}
+#PaymentCart{
+    
 }
