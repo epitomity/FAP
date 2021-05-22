@@ -18,7 +18,7 @@
 
     </head>
     <body>
-        <div id="Profile" class="container-fluid flex-column justify-content-center">
+        <div id="Payment Done" class="container-fluid flex-column justify-content-center">
 
             <ul id="Header" class="nav container-fluid align-items-center fixed-top m-0 p-0">
                 <div id="Header_Left" class="row">
@@ -49,11 +49,13 @@
 
             <p class="ThankYou">Thank you.</p>
             <p class="OrderPlaced">Your order was placed.</p>
-            <div class="HeartWithCircle"><span id="HeartIcon">&#9825;</span> <span class="dot"> </span> </div>
-            <p class="OtherTextThankYou">An email receipt including the details of your order has been sent to your email address. Please keep it for records.</p>
-            <p class="DownloadPDFText">You can also download a PDF of your receipt here:</p>
+            <svg id="Email_Icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+            </svg>
+            <p class="OtherTextThankYou mt-4">An email receipt including the details of your order has been sent to your email address. Please keep it for records.</p>
+            <p class="OtherTextThankYou mt-4">You can also download a PDF of your receipt here:</p>
             <div> <button type="submit"  class="btn btn-primary Login_Signup_Button">Download</button></div>
-            <p class="VisitAccText">Visit your account page at any time to check the status of your order, order history, and payment details</p>
+            <p class="OtherTextThankYou mt-4">Visit your account page at any time to check the status of your order, order history, and payment details</p>
             <div><button type="submit" id="profile" class="btn btn-primary Login_Signup_Button">Profile</button></div>
 
         </div>

@@ -1,123 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Rufina:wght@400;700&display=swap%27');
+
+html{
+    overflow-x: hidden;
+}
+
 body{
     height: 100%;
 }
+
 #ThankYouBox{
     display: flex;
     flex-direction:column;
     margin-top: 6.4rem;
+    padding: 1rem;
     align-items: center;
     justify-content: center;
 
 }
 .ThankYou{
-     
-    font-size: 6.25rem;
+
+    font-size: 70px;
     font-family: Rufina; 
     text-align: center;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
-@media screen and (max-width: 480px) {
-  .ThankYou {
-    font-size: 4em;
-  }
-}
+
 .OrderPlaced{
     margin-top: 2rem;
     margin-bottom:  3rem;
     font-family: Open Sans; 
-    font-size: 	2.5rem;
+    font-size: 	20px;
     text-align: center;
-        padding-left: 1.25rem;
+    padding-left: 1.25rem;
     padding-right: 1.25rem;
 
 }
 .OtherTextThankYou{
     font-family: Open Sans; 
-    font-size: 1.25rem;
+    font-size: 20px;
     text-align: center;
-        padding-left: 1.25rem;
+    padding-left: 1.25rem;
     padding-right: 1.25rem;
 
 }
-.DownloadPDFText{
-    font-family: Open Sans; 
-    font-size: 1.25rem;
-    text-align: center;
-    margin-top: 2.5rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-        
-}
-.VisitAccText{
-     font-family: Open Sans; 
-    font-size: 1.25rem;
-    text-align: center;
-    margin-top: 2.5rem;
-    padding-left: 1.25rem;
-    padding-right:1.25rem;
-}
+
 #profile{
-width: 5.938rem;
+    width: 5.938rem;
 }
 
-#HeartIcon {
-  content: "\2661";
-  font-size:2.5rem;
-  position: relative;
-  left:  2.38rem;
-  bottom: .3rem;
-  color: whitesmoke;
-  
+#Email_Icon {
+    width: 2.5rem;
 }
+
 .dot {
-  height: 2.5rem;
-  width: 2.5rem;
-  background-color: #3C3C3C;
-  border-radius: 50%;
-  display: inline-block;
-  
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #3C3C3C;
+    border-radius: 50%;
+    display: inline-block;
+
 }
-.HeartWithCircle{
-    padding-right: 2rem;
-}
+
 #PaymentDetails{
-   margin-top:3.5rem;
-   font-family: Open Sans;
+    width: 100vw;
+    margin:3.5rem 0px 0px 0px;
+    font-family: Open Sans;
 }
 
 #PaymentInformation{
-   background-color: #f7f6ee;
-   padding-left: 5rem;
-   padding-right: 5rem;
-   padding-top: 2rem;
-    
+    background-color: #f7f6ee;
+    padding: 3rem 5rem 3rem 5rem;
+
 }
 #PaymentCart{
     color: #3D3D3D;
-    margin-top: 2rem;
+    height: min-content;
+    padding: 3rem 3rem 3rem 3rem;
 }
 .text-primary{
     color: #3D3D3D;
 }
 #PaymentDetails input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 1px solid #3D3D3D;
-  border-radius: 8px;
-  background-color: #f7f6ee;
-   
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #3D3D3D;
+    border-radius: 8px;
+    background-color: #f7f6ee;
+
 }
 #PaymentDetails input[type=email] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 1px solid #3D3D3D;
-  border-radius: 8px;
-  background-color: #f7f6ee;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #3D3D3D;
+    border-radius: 8px;
+    background-color: #f7f6ee;
 
 }
 .ButtonsPayment{
     display: flex;
     justify-content:space-between;
+}
+
+.ButtonsPayment button{
+    height: min-content;
+    align-self: center;
+}
+
+@media screen and (max-width: 575px) {
+    #PaymentInformation{
+        padding: 2rem;
+    }
+
+    #PaymentCart{
+        padding: 2rem;
+    }
 }

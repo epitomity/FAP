@@ -52,68 +52,68 @@
                 </div>
             </ul>
 
-        </div>
+            <div id="Profile_Header" class="row align-items-center">
 
-        <div id="Profile_Header" class="row align-items-center">
+                <div id="Profile_Name_Role" class="col-12 col-sm-10">
+                    <h1>Full Name of Customer</h1>
+                    <h2>Role</h2>
+                </div>
 
-            <div id="Profile_Name_Role" class="col-12 col-sm-10">
-                <h1>Full Name of Customer</h1>
-                <h2>Role</h2>
+                <div class="col-12 col-sm-2 text-center">
+                    <button id="Sign_Out_Button" type="button" class="btn btn-dark">Sign Out</button>
+                </div>
+
             </div>
 
-            <div class="col-12 col-sm-2 text-center">
-                <button id="Sign_Out_Button" type="button" class="btn btn-dark">Sign Out</button>
-            </div>
+            <div id="Profile_Body" class="row">
 
-        </div>
+                <div id="Payment_Details" class="col-12 col-md-9">
 
-        <div id="Profile_Body" class="row">
+                    <h1>Payment Details</h1>
+                    <h2>Contact Information</h2>
+                    <p>Email: jamiellevelasquez@gmail.com</p>
+                    <h2>Shipping Information</h2>
 
-            <div id="Payment_Details" class="col-12 col-md-9">
+                    <div class="row">
 
-                <h1>Payment Details</h1>
-                <h2>Contact Information</h2>
-                <p>Email: jamiellevelasquez@gmail.com</p>
-                <h2>Shipping Information</h2>
+                        <div class="col">
 
-                <div class="row">
+                            <p>First Name: Jamielle</p>
+                            <p>Company: University of Santo Tomas</p>
+                            <p>Address: Cedar Crest, Acacia Estates</p>
+                            <p>Postal Code: 1631</p>
+                            <p>Region Metro Manila</p>
 
-                    <div class="col">
+                        </div>
 
-                        <p>First Name: Jamielle</p>
-                        <p>Company: University of Santo Tomas</p>
-                        <p>Address: Cedar Crest, Acacia Estates</p>
-                        <p>Postal Code: 1631</p>
-                        <p>Region Metro Manila</p>
+                        <div class="col">
+                            <p>Last Name: Velasquez</p>
+                            <p>Appartment Number: 221 Hawthron bldg.</p>
+                            <p> City Taguig</p>
+                            <p> Country: Philippines</p>
+
+                        </div>
 
                     </div>
+                </div>
 
-                    <div class="col">
-                        <p>Last Name: Velasquez</p>
-                        <p>Appartment Number: 221 Hawthron bldg.</p>
-                        <p> City Taguig</p>
-                        <p> Country: Philippines</p>
 
+                <div id="PDF_Download_Container"class="col-12 col-md-3">
+
+                    <div class="pdf-download">
+                        <h1>Inventory PDF</h1>
+                        <button id="Inventory_PDF" type="button" class="btn btn-dark">Download</button>
+                    </div>
+
+                    <div class="pdf-download">
+                        <h1>User Database PDF</h1>
+                        <button id="UserDB_PDF" type="button" class="btn btn-dark">Download</button>
                     </div>
 
                 </div>
             </div>
-
-
-            <div id="PDF_Download_Container"class="col-12 col-md-3">
-
-                <div class="pdf-download">
-                    <h1>Inventory PDF</h1>
-                    <button id="Inventory_PDF" type="button" class="btn btn-dark">Download</button>
-                </div>
-
-                <div class="pdf-download">
-                    <h1>User Database PDF</h1>
-                    <button id="UserDB_PDF" type="button" class="btn btn-dark">Download</button>
-                </div>
-
-            </div>
         </div>
+        
         <div>
             <!-- Login Modal -->
             <div class="modal right fade" id="LoginModal" tabindex="-1" role="dialog">

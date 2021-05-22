@@ -52,7 +52,7 @@
 
             <div id="Title" class="container-fluid">
                 <img id="Quote_Background" src="imageAssets/Quote_Background.png">
-                <div class="row align-items-center m-0">
+                <div id="Title_Container" class="row align-items-center m-0">
                     
                     <div class="col-12 col-lg text-center">
                         <img id="Product_Sample" src="imageAssets/Parfum-Ethereal.png">

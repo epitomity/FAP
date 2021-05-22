@@ -62,9 +62,12 @@ ul.nav a:hover {
     z-index: -1;
 }
 
+#Title_Container{
+    height: 100vh;
+}
+
 #Product_Sample {
     width: 190px;
-    margin-top: 100px;
 }
 
 #Title {
@@ -493,10 +496,11 @@ ul.nav a:hover {
     #Product_Sample {
         height: 55vh;
         width: auto;
+        margin-top: 20%;
     }
 
     #Title_Page {
-        margin-top: 35px;
+        margin-top: 0px;
         padding: 0px;
         text-align: center;
     }
@@ -563,12 +567,19 @@ ul.nav a:hover {
         padding: 0px;
     }
 }
+#Profile{
+    padding: 0px;
+}
 
 #Profile_Body{
     font-family: Open Sans;
     padding: 50px 75px 50px 75px;
     width: 100%;
     margin: 0px;
+}
+
+#Sign_Out_Button{
+    width: 90px;
 }
 
 #Payment_Details h1{
@@ -638,7 +649,7 @@ ul.nav a:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0px;
+        padding: 0px 0px 10px 0px;
     }
 }
 
@@ -657,6 +668,6 @@ ul.nav a:hover {
     }
     
     #Profile_Header button{
-       margin-top: 20px;
+       margin-top: 40px 20px 20px 20px;
     }
 }
