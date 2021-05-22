@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
 
         //Establish Database Connection
         try {
-
+            
             //Initialize Variables
             Class.forName(config.getInitParameter("jdbcClassName"));
             String username = config.getInitParameter("dbUserName");
