@@ -101,7 +101,7 @@ width: 5.938rem;
 .text-primary{
     color: #3D3D3D;
 }
-input[type=text] {
+#PaymentDetails input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   border: 1px solid #3D3D3D;
@@ -109,7 +109,7 @@ input[type=text] {
   background-color: #f7f6ee;
    
 }
-input[type=email] {
+#PaymentDetails input[type=email] {
   padding: 12px 20px;
   margin: 8px 0;
   border: 1px solid #3D3D3D;

@@ -31,10 +31,10 @@
             <ul id="Header" class="nav container-fluid align-items-center fixed-top m-0 p-0">
                 <div id="Header_Left" class="row">
                     <li class="nav-item">
-                        <a class="nav-link " href="#Products">Products</a>
+                        <a class="nav-link " href="LandingPage.jsp">Products</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#Reviews">Reviews</a>
+                        <a class="nav-link" href="LandingPage.jsp">Reviews</a>
                     </li>
                 </div>
 
@@ -114,7 +114,75 @@
 
             </div>
         </div>
+        <div>
+            <!-- Login Modal -->
+            <div class="modal right fade" id="LoginModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h1 class="text-center LoginSignUpHeader">Login</h1>
+                            <form>
+                                <div class="form-group">
+                                    <label for="Email_Input_Login">Email</label>
+                                    <input type="email" class="form-control" id="Email_Input_Login">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password_Input_Login">Password</label>
+                                    <input type="password" class="form-control" id="Password_Input_Login">
+                                </div>
+                                Error Messages
+                                <div class="d-flex flex-column justify-content-center mt-5">
+                                    <a id="Login_Signup" class="text-center mb-3 text-decoration-none" data-dismiss="modal" data-toggle="modal" href="#SignupModal">Create Account</a>
+                                    <button type="submit" id="Login_Submit" class="btn btn-primary Login_Signup_Button">Submit</button>
+                                </div>
 
+                            </form>
+                        </div>
+                    </div>
+                    <!-- modal-content -->
+                </div>
+                <!-- modal-dialog -->
+            </div>
+            <!-- modal -->
+        </div>
+
+        <div>
+            <!-- Sign Up Modal -->
+            <div class="modal right fade" id="SignupModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h1 class="text-center LoginSignUpHeader">Sign Up</h1>
+                            <form>
+                                <div class="form-group">
+                                    <label for="Email_Input_Signup">Email</label>
+                                    <input type="email" class="form-control" id="Email_Input_Signup">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password_Input_Signup">Password</label>
+                                    <input type="text" class="form-control" id="Password_Input_Signup">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ConfirmPassword_Signup">Confirm Password</label>
+                                    <input type="text" class="form-control" id="ConfirmPassword_Signup">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="Captcha_Signup" placeholder="What is being shown above?">
+                                </div>
+                                Error Messages
+                                <div class="d-flex flex-column justify-content-center mt-5">
+                                    <button type="submit" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Submit</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- modal-content -->
+                </div>
+                <!-- modal-dialog -->
+            </div>
+            <!-- modal -->
+        </div>
 
     </body>
 </html>
