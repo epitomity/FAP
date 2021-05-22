@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Rufina:wght@400;700&display=swap%27');
-
 :root {
     --white: rgba(255, 255, 255);
     --dark_gray: #3D3D3D;
@@ -7,6 +6,10 @@
     --black: rgba(0, 0, 0);
     --light_gray: #F3F4F1;
     --light_brown: #F7F6EE
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 button:focus {
@@ -40,27 +43,39 @@ ul.nav a:hover {
     height: 30px;
 }
 
+#Header_Left{
+    position: absolute;
+    left: 0px;
+    margin-left: 10px
+}
+
+#Header_Right{
+    position: absolute;
+    right: 0px;
+    margin-right: 10px
+}
+
 #Quote_Background {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    position: absolute;
+    z-index: -1;
 }
 
 #Product_Sample {
-    position: absolute;
-    left: 15vw;
-    height: 60vh;
-    top: 20vh;
+    width: 190px;
+    margin-top: 100px;
 }
 
 #Title {
+    margin: 0px;
     padding: 0px;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
 #Title_Page {
-    top: 40vh;
-    left: 50%
+    padding: 0px;
 }
 
 #Title_Header {
@@ -181,7 +196,7 @@ ul.nav a:hover {
     font-family: Rufina;
     font-size: 35px;
     color: var(--white);
-    margin: 0px 300px 0px 300px;
+    margin: 0px 20% 0px 20%;
 }
 
 #Review_Title{
@@ -190,7 +205,7 @@ ul.nav a:hover {
     margin-left: 100px;
     margin-top: 75px;
     margin-bottom: 75px;
-    top: 125px;
+    top: 75px;
     text-align: left;
     font-family: Rufina;
     font-size: 70px;
@@ -232,7 +247,7 @@ ul.nav a:hover {
 
 #Footer .col{
     margin: 0px;
-    padding: 0px
+    padding: 0px 10px 0px 10px;
 }
 
 #Footer ul{
@@ -252,7 +267,15 @@ ul.nav a:hover {
     font-weight: bold;
 }
 
-#Footer a,h2,p{
+#Footer a{
+    color: var(--black);
+    font-size: 13px;
+}
+#Footer h2{
+    color: var(--black);
+    font-size: 13px;
+}
+#Footer p{
     color: var(--black);
     font-size: 13px;
 }
@@ -262,6 +285,71 @@ ul.nav a:hover {
 }
 
 #Footer input{
+    border: none;
+    background-color: var(--light_brown);
+    border-bottom: 1px solid var(--grey);
+    font-family: Open Sans;
+    font-size: 13px;
+}
+
+#Footer_Small{
+    display: none;
+    font-family: Open Sans;
+    background-color: var(--light_brown);
+    padding: 10px 0px 10px 0px;
+}
+
+#Footer_Small>*{
+    text-align: center;
+    justify-content: center;
+    margin: 15px 0px 15px 0px;
+}
+
+#Footer_Small button{
+    border: none;
+    background-color: var(--light_brown);
+}
+
+#Footer_Small .col{
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+}
+
+#Footer_Small ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#Footer_Small img{
+    width: 35px;
+    margin: 0px;
+}
+
+#Footer_Small h1{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#Footer_Small a{
+    color: var(--black);
+    font-size: 13px;
+}
+#Footer_Small h2{
+    color: var(--black);
+    font-size: 13px;
+}
+#Footer_Small p{
+    color: var(--black);
+    font-size: 13px;
+}
+
+#Footer_Small a:hover{
+    text-decoration: none;
+}
+
+#Footer_Small input{
     border: none;
     background-color: var(--light_brown);
     border-bottom: 1px solid var(--grey);
@@ -279,13 +367,6 @@ ul.nav a:hover {
     -ms-transform: translate3d(0%, 0, 0);
     -o-transform: translate3d(0%, 0, 0);
     transform: translate3d(0%, 0, 0);
-}
-
-@media screen and (max-width: 1000px) {
-    .modal-dialog,
-    .modal.right .modal-dialog {
-        width: 75vw;
-    }
 }
 
 .modal-content,
@@ -349,6 +430,7 @@ ul.nav a:hover {
     color: var(--black);
     font-size: 12px;
 }
+
 @media screen and (max-width: 640px) {
 
     .nav-link {
