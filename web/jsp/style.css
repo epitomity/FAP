@@ -349,3 +349,232 @@ ul.nav a:hover {
     color: var(--black);
     font-size: 12px;
 }
+@media screen and (max-width: 640px) {
+
+    .nav-link {
+        font-size: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #Luvamine-Logo-White {
+        height: 15px;
+    }
+
+    #Product_Sample {
+        height: 60vh;
+        width: auto;
+    }
+
+    #Title_Page {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    #Title_Header {
+        font-size: 40px;
+    }
+
+    #Shop_Now_Button {
+        margin-top: 10px;
+        font-family: Open Sans;
+        font-size: 15px;
+        background-color: var(--black);
+    }
+
+    #Quote{
+        font-size: 30px;
+        margin: 0px 10% 0px 10%;
+    }
+
+    #Review_Title{
+        font-size: 50px;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #Luvamine-Logo-White {
+        height: 15px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    #Product_Sample {
+        height: 55vh;
+        width: auto;
+    }
+
+    #Title_Page {
+        margin-top: 35px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    #Title_Header {
+        font-size: 30px;
+    }
+
+    #Shop_Now_Button {
+        margin-top: 10px;
+        font-family: Open Sans;
+        font-size: 15px;
+        background-color: var(--black);
+    }
+
+    #Review_Title{
+        position: relative;
+        margin: 0px 0px 50px 0px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    #Review_Right_Side{
+        border: none;
+        margin: 50px 0px 0px 0px;
+        padding: 0px 10% 0px 10%;
+    }
+
+
+    #Footer{
+        display: none;
+    }
+
+    #Footer_Small{
+        display: flex;
+        flex-direction: column;
+        font-family: Open Sans;
+        background-color: var(--light_brown);
+        padding: 10px 0px 10px 0px;
+    }
+
+    #Footer_Small input{
+        width: 50%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 1310px) {
+    #Product_col {
+        padding: 60px 60px 60px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    #Product_Title {
+        margin: 50px 0px 50px 0px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #Product_col{
+        padding: 0px;
+    }
+}
+
+#Profile_Body{
+    font-family: Open Sans;
+    padding: 50px 75px 50px 75px;
+    width: 100%;
+    margin: 0px;
+}
+
+#Payment_Details h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+#Payment_Details h2{
+    margin: 40px 0px 20px 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#Profile_Header{
+    margin: 55px 0px 0px 0px;
+    padding: 50px 75px 50px 75px;
+    width: 100%;
+    background-color: var(--light_brown);
+}
+
+#Profile_Name_Role h1{
+    font-family: Rufina;
+    font-size: 35px;
+}
+
+#Profile_Name_Role h2{
+    font-family: Open Sans;
+    font-size: 20px;
+}
+
+#PDF_Download_Container{
+    border-left: 3px solid var(--grey);
+}
+
+.pdf-download{
+    padding: 20px 0px 20px 40px;
+}
+
+#PDF_Download_Container h1{
+    font-size: 30px;
+}
+
+#PDF_Download_Container button{
+    font-size: 16px;
+    margin: 10px 0px 0px 5px;
+}
+
+@media screen and (max-width: 767px) {
+
+    #PDF_Download_Container{
+        border-top: 3px solid var(--grey);
+        border-left: none;
+        text-align: center;
+        padding: 25px 0px 15px 0px;
+        margin: 15px 0px 15px 0px;
+    }
+
+    #PDF_Download_Container button{
+        margin: 0px;
+    }
+
+    #PDF_Download_Container h1{
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .pdf-download{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    #Profile_Body{
+        padding: 20px;
+    }
+
+    #Profile_Header{
+        padding: 40px 20px 40px 20px;
+    }
+
+    #Profile_Name_Role{
+       text-align: center;
+    }
+    
+    #Profile_Header button{
+       margin-top: 20px;
+    }
+}
