@@ -219,8 +219,10 @@
           </div>
 
           <hr class="my-4">
+          <div class ="ButtonsPayment">
           <button type="submit" class="btn btn-primary Login_Signup_Button" style="background-color:#f7f6ee; color:black; ">&lt; Continue Shopping</button>
-          <button type="submit" class="btn btn-primary Login_Signup_Button" style="width: 11rem; margin-left:40rem; ">Checkout</button>
+          <button type="submit" class="btn btn-primary Login_Signup_Button" style="width: 11rem;">Checkout</button>
+          </div>
         </form>
       </div>
     </div>           

@@ -91,18 +91,20 @@ width: 5.938rem;
    background-color: #f7f6ee;
    padding-left: 5rem;
    padding-right: 5rem;
+   padding-top: 2rem;
     
 }
 #PaymentCart{
-    color: black;
+    color: #3D3D3D;
+    margin-top: 2rem;
 }
 .text-primary{
-    color: black;
+    color: #3D3D3D;
 }
 input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
-  border: 2px solid black;
+  border: 1px solid #3D3D3D;
   border-radius: 8px;
   background-color: #f7f6ee;
    
@@ -110,8 +112,12 @@ input[type=text] {
 input[type=email] {
   padding: 12px 20px;
   margin: 8px 0;
-  border: 2px solid black;
+  border: 1px solid #3D3D3D;
   border-radius: 8px;
   background-color: #f7f6ee;
 
+}
+.ButtonsPayment{
+    display: flex;
+    justify-content:space-between;
 }
