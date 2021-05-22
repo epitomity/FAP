@@ -721,3 +721,21 @@ h6 {
 .text-muted {
     color: #919aa3 !important
 }
+
+.cart-img{
+    width: 40px;
+}
+
+#Cart_Header{
+    padding: 35px 0px 15px 0px;
+    margin: 0px 30px 15px 30px;
+    border-bottom: 3px solid var(--grey);
+}
+
+#Cart_Container{
+    margin: 0px 10px 0px 10px;
+}
+
+#Cart_Container p{
+    text-align: left;
+}

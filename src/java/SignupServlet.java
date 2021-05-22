@@ -56,40 +56,53 @@ public class SignupServlet extends HttpServlet {
 
         try {
 
+            //Initialize Captcha
             HttpSession session = request.getSession();
             Captcha captcha = (Captcha) session.getAttribute(Captcha.NAME);
             request.setCharacterEncoding("UTF-8");
             String answer = request.getParameter("answer");
-            
+
+            //Declare Error Message
+            String errorMessage;
+
             //Incorrect Captcha
             if (!captcha.isCorrect(answer)) {
-               // throw new CaptchaIncorrectException(null);
+                errorMessage = "Your captcha was incorrect.";
+                request.setAttribute("errorMessage", errorMessage);
+                RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+                rd.forward(request, response);
             }
-            
+
             //Initialize Variables from User
             user = request.getParameter("username");
             pass = request.getParameter("password");
             pass2 = request.getParameter("repeatpassword");
             email = request.getParameter("email");
-            //Check if the user missed any inputs 
-            if (user.isEmpty() || pass.isEmpty() || pass2.isEmpty()||email.isEmpty()) {
 
-                //Redirect to error page
-               // throw new NullValueException(null);
+            //Check if the user missed any inputs 
+            if (user.isEmpty() || pass.isEmpty() || pass2.isEmpty() || email.isEmpty()) {
+
+                errorMessage = "Please complete all required inputs.";
+                request.setAttribute("errorMessage", errorMessage);
+                RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+                rd.forward(request, response);
+
             }
 
             //Check if the password confirmation is true
             if (!pass.equals(pass2)) {
 
                 //Redirect to error page
-               // throw new IncorrectMatchPassException(null);
+                errorMessage = "Your passwords did not match.";
+                request.setAttribute("errorMessage", errorMessage);
+                RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+                rd.forward(request, response);
 
             } else {
 
                 //Initialize Prepared SQL Statement
                 String query = "SELECT * FROM APP.USER_INFO WHERE username = ? OR email=?";
                 String query2 = "INSERT INTO APP.USER_INFO (EMAIL,USERNAME, PASSWORD, \"ROLE\") VALUES (?, ?, ?, DEFAULT)";
-
 
                 //Sign-up Logic
                 try (PreparedStatement pstmt = conn.prepareStatement(query);
@@ -104,13 +117,16 @@ public class SignupServlet extends HttpServlet {
                     if (!result.next()) {
                         pstmt2.setString(1, email);
                         pstmt2.setString(2, user);
-                        pstmt2.setString(3,pass);
+                        pstmt2.setString(3, pass);
                         pstmt2.executeUpdate();
                         response.sendRedirect("LandingPage.jsp");
                     } else {
-                        
+
                         //The username or email was already taken
-                       // throw new UserTakenException(null);
+                        errorMessage = "Your username or email is already taken.";
+                        request.setAttribute("errorMessage", errorMessage);
+                        RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+                        rd.forward(request, response);
                     }
                 }
             }

@@ -21,6 +21,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css" />
+        
     </head>
 
     <body>
@@ -53,7 +54,7 @@
             <div id="Title" class="container-fluid">
                 <img id="Quote_Background" src="imageAssets/Quote_Background.png">
                 <div id="Title_Container" class="row align-items-center m-0">
-                    
+
                     <div class="col-12 col-lg text-center">
                         <img id="Product_Sample" src="imageAssets/Parfum-Ethereal.png">
                     </div>
@@ -77,12 +78,12 @@
                             <br/>Dare to express yourself through a fragrance<br/>and let the scent do the talking.
                         </h1>
                     </div>
-                    <div id="Product_col" class="col">
+                    <form action="CartServlet" method="get" id="Product_col" class="col">
 
                         <div class="container">
                             <div class="row">
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="P1" type="submit">
                                         <img class="Product_Image parfum" src="imageAssets/Parfum-Ethereal.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -211,7 +212,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
@@ -379,7 +380,7 @@
                                 <h1 class="text-center LoginSignUpHeader">Login</h1>
                                 <form action="LoginServlet" method="post" id="login-form">
                                     <div class="form-group">
-                                        <label for="Username_Input_Login">Email</label>
+                                        <label for="Username_Input_Login">Username</label>
                                         <input type="text" class="form-control" name="username" id="Username_Input_Login">
                                     </div>
                                     <div class="form-group">
@@ -425,12 +426,12 @@
                                         <label for="ConfirmPassword_Signup">Confirm Password</label>
                                         <input type="text" class="form-control" id="ConfirmPassword_Signup"name="repeatpassword">
                                     </div>
-                                     <!-- Captcha -->
+                                    <!-- Captcha -->
                                     <div class="d-flex justify-content-center mt-2">
-                                            <img src="/FAP/captchaImg" class="rounded mr-2" />
-                                            <div class="form-label-group">
-                                            </div>
+                                        <img src="/FAP/captchaImg" class="rounded mr-2" />
+                                        <div class="form-label-group">
                                         </div>
+                                    </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="Captcha_Signup" style="margin-top:1rem;" name="answer" placeholder="What is being shown above?">
                                     </div>
@@ -448,6 +449,27 @@
                 <!-- modal -->
             </div>
 
+            <div>
+                <!-- Cart Modal -->
+                <div class="modal right fade" id="CartModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <h1 id="Cart_Header">Your Cart</h1>
+                            <div class="modal-body col text-center">
+                                <div id="Cart_Container" class="row align-items-center justify-content-between">
+                                    <img class="cart-img" src="imageAssets/Room-Spray-White-Tea-_-Sage.png">
+                                    <p>White Tea & Sage<br>Room & Linen Spray<br>(200ml)</p>
+                                    <p>300 ₱</p>
+                                </div>
+                                <a href="PaymentMethods.jsp"><button type="button" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Checkout</button></a>
+                            </div>
+                        </div>
+                        <!-- modal-content -->
+                    </div>
+                    <!-- modal-dialog -->
+                </div>
+                <!-- modal -->
+            </div>
 
         </div>
     </body>

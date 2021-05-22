@@ -2,6 +2,8 @@
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -82,7 +84,6 @@ public class LoginServlet extends HttpServlet {
                 RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
                 rd.forward(request, response);
 
-//                throw new NullValueException(null);
                 //If the user inputed a VALID username, executes this block
             } else if (result.next()) {
 
@@ -98,6 +99,9 @@ public class LoginServlet extends HttpServlet {
                     person.setUsername(result.getString("username"));
 
                     HttpSession session = request.getSession();
+                    
+                    List<Product> cart = new ArrayList<Product>();
+                    session.setAttribute("cart", cart);
                     session.setAttribute("person", person);
                     session.setAttribute("username", result.getString("username"));
                     //Go to success page

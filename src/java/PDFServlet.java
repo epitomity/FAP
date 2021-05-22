@@ -1,11 +1,10 @@
+
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
 import java.io.*;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -24,7 +23,8 @@ public class PDFServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
 
         super.init(config);
-
+       
+        
         //Establish Database Connection
         try {
 
@@ -109,6 +109,7 @@ public class PDFServlet extends HttpServlet {
 
                     //Formatting
                     table.getDefaultCell().setHorizontalAlignment(Element.ALIGN_RIGHT);
+
                     //Page Number Formatting
                     table.addCell(new Phrase(String.format("Page %d of", writer.getPageNumber())));
                     PdfPCell cell = new PdfPCell(total);
@@ -139,21 +140,28 @@ public class PDFServlet extends HttpServlet {
         //Initialization
         String action = request.getParameter("action");
         java.util.Date date = new java.util.Date();
+
         // Get username from the current session
         Person person = (Person) request.getSession(false).getAttribute("person");
         username = person.getUsername();
+
         //Create an output stream for writing binary data in the response.
         ServletOutputStream os = response.getOutputStream();
+
         //Set the response content type to PDF
         response.setContentType("application/pdf");
+
         //Get dates
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         DateFormat pdfDate = new SimpleDateFormat("yyyyMMddhhmmss");
+
         //Save dates as string
         String pdfDateName = pdfDate.format(date);
         String strDate = dateFormat.format(date);
+
         //Set filename to current date
         response.setHeader("Content-Disposition", "attachment;filename=" + pdfDateName + ".pdf");
+
         //Create a new document
         Document doc = new Document();
 
@@ -162,8 +170,9 @@ public class PDFServlet extends HttpServlet {
             Statement stmt = conn.createStatement();
 
             //Check which button is clicked
-            if (action.equals("own")) {
+            if (action.equals("inventory")) {
 
+                
                 //Create an instance of the PdfWriter using the output stream
                 PdfWriter writer = PdfWriter.getInstance(doc, os);
 
@@ -177,80 +186,30 @@ public class PDFServlet extends HttpServlet {
 
                 //Add information
                 doc.add(new Paragraph("Currently logged in as: " + username));
-                doc.add(new Paragraph("User Database as of: " + strDate));
+                doc.add(new Paragraph("Inventory as of: " + strDate));
                 doc.add(Chunk.NEWLINE);
 
                 //Get result set using a sql statement
-                ResultSet rs = stmt.executeQuery("SELECT * FROM APP.USER_INFO WHERE username = '" + username + "'");
+                ResultSet rs = stmt.executeQuery("select nameofproduct,stocknumber from APP.PRODUCTSTOCK");
 
-                //Create table with 2 columns
+                //Create table with 3 columns
                 PdfPTable my_report_table = new PdfPTable(2);
 
                 //Create a table header
-                PdfPCell table_cell = new PdfPCell(new Phrase("Username"));
+                PdfPCell table_cell = new PdfPCell(new Phrase("Product Code"));
                 my_report_table.addCell(table_cell);
-                table_cell = new PdfPCell(new Phrase("Role"));
-                my_report_table.addCell(table_cell);
-
-                //Input data
-                while (rs.next()) {
-
-                    String usernameDB = rs.getString("username");
-                    table_cell = new PdfPCell(new Phrase(usernameDB + "*"));
-                    my_report_table.addCell(table_cell);
-                    String role = rs.getString("role");
-                    table_cell = new PdfPCell(new Phrase(role));
-                    my_report_table.addCell(table_cell);
-
-                }
-
-                //Attach report table to PDF
-                doc.add(my_report_table);
-                doc.close();
-
-            } else if (action.equals("all")) {
-
-                //Create an instance of the PdfWriter using the output stream
-                PdfWriter writer = PdfWriter.getInstance(doc, os);
-
-                //Create new HeaderFooterPageEvent for the header and footer
-                HeaderFooterPageEvent event = new HeaderFooterPageEvent();
-                writer.setPageEvent(event);
-
-                //Document formatting
-                doc.setPageSize(PageSize.LETTER.rotate());
-                doc.open();
-
-                //Add information
-                doc.add(new Paragraph("Currently logged in as: " + username));
-                doc.add(new Paragraph("User Database as of: " + strDate));
-                doc.add(Chunk.NEWLINE);
-
-                //Get result set using a sql statement
-                ResultSet rs = stmt.executeQuery("select username,role  from APP.USER_INFO");
-
-                //Create table with 2 columns
-                PdfPTable my_report_table = new PdfPTable(2);
-
-                //Create a table header
-                PdfPCell table_cell = new PdfPCell(new Phrase("Username"));
-                my_report_table.addCell(table_cell);
-                table_cell = new PdfPCell(new Phrase("Role"));
+                table_cell = new PdfPCell(new Phrase("Current Stock"));
                 my_report_table.addCell(table_cell);
 
                 //Inputs data
                 while (rs.next()) {
-                    String usernameDB = rs.getString("username");
-                    table_cell = new PdfPCell(new Phrase(usernameDB));
                     
-                    //Checking for current user
-                    if (usernameDB.equals(username)) {
-                        table_cell = new PdfPCell(new Phrase(usernameDB + "*"));
-                    }
-                    
+                    String nameofproduct = rs.getString("nameofproduct");
+                    table_cell = new PdfPCell(new Phrase(nameofproduct));
                     my_report_table.addCell(table_cell);
-                    String role = rs.getString("role");
-                    table_cell = new PdfPCell(new Phrase(role));
+                    
+                    String stocknumber = rs.getString("stocknumber");
+                    table_cell = new PdfPCell(new Phrase(stocknumber));
                     my_report_table.addCell(table_cell);
 
                 }
@@ -258,6 +217,65 @@ public class PDFServlet extends HttpServlet {
                 //Attach report table to PDF
                 doc.add(my_report_table);
                 doc.close();
+
+            } else if (action.equals("users")) {
+
+                //Create an instance of the PdfWriter using the output stream
+                PdfWriter writer = PdfWriter.getInstance(doc, os);
+
+                //Create new HeaderFooterPageEvent for the header and footer
+                HeaderFooterPageEvent event = new HeaderFooterPageEvent();
+                writer.setPageEvent(event);
+
+                //Document formatting
+                doc.setPageSize(PageSize.LETTER.rotate());
+                doc.open();
+
+                //Add information
+                doc.add(new Paragraph("Currently logged in as: " + username));
+                doc.add(new Paragraph("User Database as of: " + strDate));
+                doc.add(Chunk.NEWLINE);
+
+                //Get result set using a sql statement
+                ResultSet rs = stmt.executeQuery("select username,role,email from APP.USER_INFO");
+
+                //Create table with 3 columns
+                PdfPTable my_report_table = new PdfPTable(3);
+
+                //Create a table header
+                PdfPCell table_cell = new PdfPCell(new Phrase("Username"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("Role"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("Email"));
+                my_report_table.addCell(table_cell);
+
+                //Inputs data
+                while (rs.next()) {
+                    
+                    String usernameDB = rs.getString("username");
+                    table_cell = new PdfPCell(new Phrase(usernameDB));
+                    //Checking for current user
+                    if (usernameDB.equals(username)) {
+                        table_cell = new PdfPCell(new Phrase(usernameDB + "*"));
+                    }
+                    my_report_table.addCell(table_cell);
+                    
+                    String role = rs.getString("role");
+                    table_cell = new PdfPCell(new Phrase(role));
+                    my_report_table.addCell(table_cell);
+                    
+                    String email = rs.getString("email");
+                    table_cell = new PdfPCell(new Phrase(email));
+                    my_report_table.addCell(table_cell);
+
+                }
+
+                //Attach report table to PDF
+                doc.add(my_report_table);
+                doc.close();
+            } else if (action.equals("receipt")) {
+                
             }
         } catch (SQLException e) {
         } catch (DocumentException ex) {

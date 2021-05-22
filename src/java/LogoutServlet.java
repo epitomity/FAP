@@ -19,7 +19,7 @@ public class LogoutServlet extends HttpServlet {
         s.invalidate();
         
         //Go to index.jsp
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("LandingPage.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

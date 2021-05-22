@@ -22,6 +22,21 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css" />
+
+        <%
+            //Cache Control
+            response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");//HTTP 1.1
+            response.setDateHeader("Expires", 0); //Causes the proxy cache to see the page as "stale"
+            response.setHeader("Pragma", "no-cache"); //HTTP 1.0 backward compatibility
+
+            //Illegal Session Handling
+            String user = (String) session.getAttribute("username");
+            if (null == user) {
+                String errorMessage = "You don't have access to this page.";
+                request.setAttribute("errorMessage", errorMessage);
+                getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
+            }
+        %>
     </head>
 
     <body>
@@ -59,9 +74,9 @@
                     <h2>Role</h2>
                 </div>
 
-                <div class="col-12 col-sm-2 text-center">
-                    <button id="Sign_Out_Button" type="button" class="btn btn-dark">Sign Out</button>
-                </div>
+                <form  action="LogoutServlet" method="post" class="col-12 col-sm-2 text-center">
+                    <button id="Sign_Out_Button" type="submit" class="btn btn-dark">Sign Out</button>
+                </form>
 
             </div>
 
@@ -98,52 +113,20 @@
                 </div>
 
 
-                <div id="PDF_Download_Container"class="col-12 col-md-3">
+                <form action="PDFServlet" method="post" id="PDF_Download_Container"class="col-12 col-md-3">
 
                     <div class="pdf-download">
                         <h1>Inventory PDF</h1>
-                        <button id="Inventory_PDF" type="button" class="btn btn-dark">Download</button>
+                        <button id="Inventory_PDF" type="submit" name="action" value="inventory" class="btn btn-dark">Download</button>
                     </div>
 
                     <div class="pdf-download">
                         <h1>User Database PDF</h1>
-                        <button id="UserDB_PDF" type="button" class="btn btn-dark">Download</button>
+                        <button id="UserDB_PDF" type="submit" name="action" value="users" class="btn btn-dark">Download</button>
                     </div>
 
-                </div>
+                </form>
             </div>
-        </div>
-        
-        <div>
-            <!-- Login Modal -->
-            <div class="modal right fade" id="LoginModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <h1 class="text-center LoginSignUpHeader">Login</h1>
-                            <form>
-                                <div class="form-group">
-                                    <label for="Email_Input_Login">Email</label>
-                                    <input type="email" class="form-control" id="Email_Input_Login">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Password_Input_Login">Password</label>
-                                    <input type="password" class="form-control" id="Password_Input_Login">
-                                </div>
-                                Error Messages
-                                <div class="d-flex flex-column justify-content-center mt-5">
-                                    <a id="Login_Signup" class="text-center mb-3 text-decoration-none" data-dismiss="modal" data-toggle="modal" href="#SignupModal">Create Account</a>
-                                    <button type="submit" id="Login_Submit" class="btn btn-primary Login_Signup_Button">Submit</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                    <!-- modal-content -->
-                </div>
-                <!-- modal-dialog -->
-            </div>
-            <!-- modal -->
         </div>
 
         <div>
@@ -153,23 +136,32 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <h1 class="text-center LoginSignUpHeader">Sign Up</h1>
-                            <form>
+                            <form action="SignupServlet" method="post">
+                                <div class="form-group">
+                                    <label for="Username_Input_Signup">Username</label>
+                                    <input type="text" class="form-control" id="Username_Input_Signup" name="username">
+                                </div>
                                 <div class="form-group">
                                     <label for="Email_Input_Signup">Email</label>
-                                    <input type="email" class="form-control" id="Email_Input_Signup">
+                                    <input type="email" class="form-control" id="Email_Input_Signup"name="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="Password_Input_Signup">Password</label>
-                                    <input type="text" class="form-control" id="Password_Input_Signup">
+                                    <input type="text" class="form-control" id="Password_Input_Signup"name="password">
                                 </div>
                                 <div class="form-group">
                                     <label for="ConfirmPassword_Signup">Confirm Password</label>
-                                    <input type="text" class="form-control" id="ConfirmPassword_Signup">
+                                    <input type="text" class="form-control" id="ConfirmPassword_Signup"name="repeatpassword">
+                                </div>
+                                <!-- Captcha -->
+                                <div class="d-flex justify-content-center mt-2">
+                                    <img src="/FAP/captchaImg" class="rounded mr-2" />
+                                    <div class="form-label-group">
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="Captcha_Signup" placeholder="What is being shown above?">
+                                    <input type="text" class="form-control" id="Captcha_Signup" style="margin-top:1rem;" name="answer" placeholder="What is being shown above?">
                                 </div>
-                                Error Messages
                                 <div class="d-flex flex-column justify-content-center mt-5">
                                     <button type="submit" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Submit</button>
                                 </div>
