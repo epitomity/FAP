@@ -106,7 +106,7 @@ public class SignupServlet extends HttpServlet {
                         pstmt2.setString(2, user);
                         pstmt2.setString(3,pass);
                         pstmt2.executeUpdate();
-                        response.sendRedirect("PaymentDone.jsp");
+                        response.sendRedirect("LandingPage.jsp");
                     } else {
                         
                         //The username or email was already taken
