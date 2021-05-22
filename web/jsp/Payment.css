@@ -59,7 +59,7 @@ body{
     padding-right:1.25rem;
 }
 #profile{
-width: 95px;
+width: 5.938rem;
 }
 
 #HeartIcon {
@@ -84,13 +84,34 @@ width: 95px;
 }
 #PaymentDetails{
    margin-top:3.5rem;
-
+   font-family: Open Sans;
 }
+
 #PaymentInformation{
    background-color: #f7f6ee;
-
+   padding-left: 5rem;
+   padding-right: 5rem;
     
 }
 #PaymentCart{
-    
+    color: black;
+}
+.text-primary{
+    color: black;
+}
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: #f7f6ee;
+   
+}
+input[type=email] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: #f7f6ee;
+
 }
