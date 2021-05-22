@@ -66,6 +66,12 @@
         <!-- Database URL -->
     </servlet>
     
+    <!-- Error Page -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/Error404.jsp</location>
+    </error-page>
+    <!-- Error Page End -->
     
     <!-- Servlets End -->
     
