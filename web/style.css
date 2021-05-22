@@ -434,6 +434,65 @@ ul.nav a:hover {
     font-size: 12px;
 }
 
+#Profile{
+    padding: 0px;
+}
+
+#Profile_Body{
+    font-family: Open Sans;
+    padding: 50px 75px 50px 75px;
+    width: 100%;
+    margin: 0px;
+}
+
+#Sign_Out_Button{
+    width: 90px;
+}
+
+#Payment_Details h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+#Payment_Details h2{
+    margin: 40px 0px 20px 0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#Profile_Header{
+    margin: 55px 0px 0px 0px;
+    padding: 50px 75px 50px 75px;
+    width: 100%;
+    background-color: var(--light_brown);
+}
+
+#Profile_Name_Role h1{
+    font-family: Rufina;
+    font-size: 35px;
+}
+
+#Profile_Name_Role h2{
+    font-family: Open Sans;
+    font-size: 20px;
+}
+
+#PDF_Download_Container{
+    border-left: 3px solid var(--grey);
+}
+
+.pdf-download{
+    padding: 20px 0px 20px 40px;
+}
+
+#PDF_Download_Container h1{
+    font-size: 30px;
+}
+
+#PDF_Download_Container button{
+    font-size: 16px;
+    margin: 10px 0px 0px 5px;
+}
+
 @media screen and (max-width: 640px) {
 
     .nav-link {
@@ -547,6 +606,11 @@ ul.nav a:hover {
         margin: auto;
     }
 
+    .modal-dialog,
+    .modal.right .modal-dialog {
+        width: 50vw;
+    }
+
 }
 
 @media screen and (max-width: 1310px) {
@@ -566,67 +630,6 @@ ul.nav a:hover {
     #Product_col{
         padding: 0px;
     }
-}
-#Profile{
-    padding: 0px;
-}
-
-#Profile_Body{
-    font-family: Open Sans;
-    padding: 50px 75px 50px 75px;
-    width: 100%;
-    margin: 0px;
-}
-
-#Sign_Out_Button{
-    width: 90px;
-}
-
-#Payment_Details h1{
-    font-size: 25px;
-    font-weight: bold;
-}
-#Payment_Details h2{
-    margin: 40px 0px 20px 0px;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-#Profile_Header{
-    margin: 55px 0px 0px 0px;
-    padding: 50px 75px 50px 75px;
-    width: 100%;
-    background-color: var(--light_brown);
-}
-
-#Profile_Name_Role h1{
-    font-family: Rufina;
-    font-size: 35px;
-}
-
-#Profile_Name_Role h2{
-    font-family: Open Sans;
-    font-size: 20px;
-}
-
-#PDF_Download_Container{
-    border-left: 3px solid var(--grey);
-}
-
-.pdf-download{
-    padding: 20px 0px 20px 40px;
-}
-
-#PDF_Download_Container h1{
-    font-size: 30px;
-}
-
-#PDF_Download_Container button{
-    font-size: 16px;
-    margin: 10px 0px 0px 5px;
-}
-
-@media screen and (max-width: 767px) {
 
     #PDF_Download_Container{
         border-top: 3px solid var(--grey);
@@ -664,10 +667,15 @@ ul.nav a:hover {
     }
 
     #Profile_Name_Role{
-       text-align: center;
+        text-align: center;
+    }
+
+    #Profile_Header button{
+        margin-top: 40px 20px 20px 20px;
     }
     
-    #Profile_Header button{
-       margin-top: 40px 20px 20px 20px;
+    .modal-dialog,
+    .modal.right .modal-dialog {
+        width: 75vw;
     }
 }

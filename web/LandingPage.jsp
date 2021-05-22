@@ -377,14 +377,14 @@
                         <div class="modal-content">
                             <div class="modal-body">
                                 <h1 class="text-center LoginSignUpHeader">Login</h1>
-                                <form>
+                                <form action="LoginServlet" method="post" id="login-form">
                                     <div class="form-group">
-                                        <label for="Email_Input_Login">Email</label>
-                                        <input type="email" class="form-control" id="Email_Input_Login">
+                                        <label for="Username_Input_Login">Email</label>
+                                        <input type="text" class="form-control" name="username" id="Username_Input_Login">
                                     </div>
                                     <div class="form-group">
                                         <label for="Password_Input_Login">Password</label>
-                                        <input type="password" class="form-control" id="Password_Input_Login">
+                                        <input type="password" class="form-control" name="password" id="Password_Input_Login">
                                     </div>
                                     Error Messages
                                     <div class="d-flex flex-column justify-content-center mt-5">
