@@ -1,4 +1,5 @@
 //Imports
+
 import java.io.IOException;
 import java.sql.*;
 import javax.servlet.*;
@@ -69,12 +70,19 @@ public class LoginServlet extends HttpServlet {
             //Declare Person Object
             Person person = null;
 
+            //Declare Error Message
+            String errorMessage;
+
             //Check if the User didn't input 
             if (user.isEmpty() && pass.isEmpty()) {
 
                 //The username and password is empty
-//                throw new NullValueException(null);
+                errorMessage = "Please enter your username and password.";
+                request.setAttribute("errorMessage", errorMessage);
+                RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+                rd.forward(request, response);
 
+//                throw new NullValueException(null);
                 //If the user inputed a VALID username, executes this block
             } else if (result.next()) {
 
@@ -94,27 +102,31 @@ public class LoginServlet extends HttpServlet {
                     session.setAttribute("username", result.getString("username"));
                     //Go to success page
                     response.sendRedirect("Profile.jsp");
-                    
 
                 } else {
 
                     //The password was incorect
-//                    throw new PassIncException(null);
-
+                    errorMessage = "You password was incorrect.";
+                    request.setAttribute("errorMessage", errorMessage);
+                    RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+                    rd.forward(request, response);
                 }
                 //If the user inputed an INVALID username, executes this block
             } else {
 
                 if (pass.isEmpty() || pass == null) {
-
                     //Has a username, but password is empty
-//                    throw new InvalidEntryException(null);
-
+                    errorMessage = "Please enter a password.";
+                    request.setAttribute("errorMessage", errorMessage);
+                    RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+                    rd.forward(request, response);
                 }
 
                 //Both the username and the password was incorrect.
-//                throw new UserPassIncException(null);
-
+                errorMessage = "Your username and password was incorrect.";
+                request.setAttribute("errorMessage", errorMessage);
+                RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+                rd.forward(request, response);
             }
 
             //Close streams
