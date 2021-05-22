@@ -386,7 +386,6 @@
                                         <label for="Password_Input_Login">Password</label>
                                         <input type="password" class="form-control" name="password" id="Password_Input_Login">
                                     </div>
-                                    Error Messages
                                     <div class="d-flex flex-column justify-content-center mt-5">
                                         <a id="Login_Signup" class="text-center mb-3 text-decoration-none" data-dismiss="modal" data-toggle="modal" href="#SignupModal">Create Account</a>
                                         <button type="submit" id="Login_Submit" class="btn btn-primary Login_Signup_Button">Submit</button>
@@ -409,23 +408,32 @@
                         <div class="modal-content">
                             <div class="modal-body">
                                 <h1 class="text-center LoginSignUpHeader">Sign Up</h1>
-                                <form>
+                                <form action="SignupServlet" method="post">
+                                    <div class="form-group">
+                                        <label for="Username_Input_Signup">Username</label>
+                                        <input type="text" class="form-control" id="Username_Input_Signup" name="username">
+                                    </div>
                                     <div class="form-group">
                                         <label for="Email_Input_Signup">Email</label>
-                                        <input type="email" class="form-control" id="Email_Input_Signup">
+                                        <input type="email" class="form-control" id="Email_Input_Signup"name="email">
                                     </div>
                                     <div class="form-group">
                                         <label for="Password_Input_Signup">Password</label>
-                                        <input type="text" class="form-control" id="Password_Input_Signup">
+                                        <input type="text" class="form-control" id="Password_Input_Signup"name="password">
                                     </div>
                                     <div class="form-group">
                                         <label for="ConfirmPassword_Signup">Confirm Password</label>
-                                        <input type="text" class="form-control" id="ConfirmPassword_Signup">
+                                        <input type="text" class="form-control" id="ConfirmPassword_Signup"name="repeatpassword">
                                     </div>
+                                     <!-- Captcha -->
+                                    <div class="d-flex justify-content-center mt-2">
+                                            <img src="/FAP/captchaImg" class="rounded mr-2" />
+                                            <div class="form-label-group">
+                                            </div>
+                                        </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="Captcha_Signup" placeholder="What is being shown above?">
+                                        <input type="text" class="form-control" id="Captcha_Signup" style="margin-top:1rem;" name="answer" placeholder="What is being shown above?">
                                     </div>
-                                    Error Messages
                                     <div class="d-flex flex-column justify-content-center mt-5">
                                         <button type="submit" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Submit</button>
                                     </div>

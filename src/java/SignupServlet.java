@@ -10,6 +10,7 @@ public class SignupServlet extends HttpServlet {
     //Declarations
     String user = null;
     String pass = null;
+    String email = null;
     String pass2 = null;
     Connection conn = null;
 
@@ -62,52 +63,54 @@ public class SignupServlet extends HttpServlet {
             
             //Incorrect Captcha
             if (!captcha.isCorrect(answer)) {
-                throw new CaptchaIncorrectException(null);
+               // throw new CaptchaIncorrectException(null);
             }
             
             //Initialize Variables from User
             user = request.getParameter("username");
             pass = request.getParameter("password");
             pass2 = request.getParameter("repeatpassword");
-
+            email = request.getParameter("email");
             //Check if the user missed any inputs 
-            if (user.isEmpty() || pass.isEmpty() || pass2.isEmpty()) {
+            if (user.isEmpty() || pass.isEmpty() || pass2.isEmpty()||email.isEmpty()) {
 
                 //Redirect to error page
-                throw new NullValueException(null);
+               // throw new NullValueException(null);
             }
 
             //Check if the password confirmation is true
             if (!pass.equals(pass2)) {
 
                 //Redirect to error page
-                throw new IncorrectMatchPassException(null);
+               // throw new IncorrectMatchPassException(null);
 
             } else {
 
                 //Initialize Prepared SQL Statement
-                String query = "SELECT * FROM APP.USER_INFO WHERE username = ?";
-                String query2 = "INSERT INTO APP.USER_INFO (USERNAME, PASSWORD, \"ROLE\") VALUES (?, ?, DEFAULT)";
+                String query = "SELECT * FROM APP.USER_INFO WHERE username = ? OR email=?";
+                String query2 = "INSERT INTO APP.USER_INFO (EMAIL,USERNAME, PASSWORD, \"ROLE\") VALUES (?, ?, ?, DEFAULT)";
+
 
                 //Sign-up Logic
                 try (PreparedStatement pstmt = conn.prepareStatement(query);
-                        PreparedStatement pstmt2 = conn.prepareStatement(query2)) {
+                        PreparedStatement pstmt2 = conn.prepareStatement(query2);) {
 
-                    //Checks the database if the username entered by the database already exists.
+                    //Checks the database if the username or email entered by the database already exists.
                     pstmt.setString(1, user);
+                    pstmt.setString(2, email);
                     ResultSet result = pstmt.executeQuery();
 
-                    //If the username was not found in the database, encrypts the password and adds the user into the database.
+                    //If the username or email was not found in the database, encrypts the password and adds the user into the database.
                     if (!result.next()) {
-                        pstmt2.setString(1, user);
-                        pstmt2.setString(2, Security.encrypt(pass));
+                        pstmt2.setString(1, email);
+                        pstmt2.setString(2, user);
+                        pstmt2.setString(3,pass);
                         pstmt2.executeUpdate();
-                        response.sendRedirect("index.jsp");
+                        response.sendRedirect("PaymentDone.jsp");
                     } else {
                         
-                        System.out.println("tite");
-                        //The username was already taken
-                        throw new UserTakenException(null);
+                        //The username or email was already taken
+                       // throw new UserTakenException(null);
                     }
                 }
             }

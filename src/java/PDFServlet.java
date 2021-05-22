@@ -261,7 +261,6 @@ public class PDFServlet extends HttpServlet {
             }
         } catch (SQLException e) {
         } catch (DocumentException ex) {
-            Logger.getLogger(PDFdownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

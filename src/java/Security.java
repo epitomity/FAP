@@ -23,12 +23,9 @@ public class Security {
         return null;
     }
 
-    private static byte[] key = {
-        //Static key used by the encrypted database
-        0x74, 0x68, 0x69, 0x73, 0x49, 0x73, 0x41, 0x53,
-        0x65, 0x63, 0x72, 0x65, 0x74, 0x4b, 0x65, 0x79
-    };
-
+    private static byte[] key = {'l','u','v','a','m','i','n','e',
+                                     's','t','a','n','d','a','r','d'};
+    
     public static String encrypt(String strToEncrypt) {
 
         //Declare Variables
