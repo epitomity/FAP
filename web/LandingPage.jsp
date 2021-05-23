@@ -328,6 +328,9 @@
                     <p><br>Enter your email to be notified about new arrivals, exclusive offers, and more.</p>
                     <input type="email" class="form-control" id="Email_Input_Newsletter" placeholder="Email">
                 </div>
+                <div class="col-12 text-center">
+                    <p><%= config.getServletContext().getInitParameter("Copyright")%></p>
+                </div>
             </div>
 
             <div id="Footer_Small" class="container-fluid m-0">
@@ -384,6 +387,7 @@
                     <p>Enter your email to be notified about new arrivals, exclusive offers, and more.</p>
                     <input type="email" class="form-control" id="Email_Input_Newsletter" placeholder="Email">
                 </div>
+                <p><%= config.getServletContext().getInitParameter("Copyright")%></p>
             </div>
 
             <div>

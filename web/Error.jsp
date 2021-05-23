@@ -30,10 +30,11 @@
 
             </ul>
 
-            <div id="ThankYouBox">
-
-                <p class="ThankYou">${errorMessage}</p>
-
+            <div id="Error_Message_Container" class="col text-center">
+                <h1>Oops!</h1>
+                <h2>Something went wrong.</h2>
+                <h3>${errorMessage}</h3>
+                <a href="LandingPage.jsp">Click <u>here</u> to go back home.</a>
             </div>
         </div>
     </body>

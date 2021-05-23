@@ -24,7 +24,22 @@
 
         <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css" />
         <link href="Payment.css" rel="stylesheet" type="text/css"/>
+        
+        <%
+            //Cache Control
+            response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");//HTTP 1.1
+            response.setDateHeader("Expires", 0); //Causes the proxy cache to see the page as "stale"
+            response.setHeader("Pragma", "no-cache"); //HTTP 1.0 backward compatibility
 
+            //Illegal Session Handling
+            String user = (String) session.getAttribute("username");
+            if (null == user) {
+                String errorMessage = "You don't have access to this page.";
+                request.setAttribute("errorMessage", errorMessage);
+                getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
+            }
+        %>
+        
     </head>
 
     <body>
