@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 
     <head>
@@ -21,7 +22,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css" />
-        
+
+
+
     </head>
 
     <body>
@@ -456,11 +459,17 @@
                         <div class="modal-content">
                             <h1 id="Cart_Header">Your Cart</h1>
                             <div class="modal-body col text-center">
-                                <div id="Cart_Container" class="row align-items-center justify-content-between">
-                                    <img class="cart-img" src="imageAssets/Room-Spray-White-Tea-_-Sage.png">
-                                    <p>White Tea & Sage<br>Room & Linen Spray<br>(200ml)</p>
-                                    <p>300 ₱</p>
-                                </div>
+                                
+                                <c:forEach var="item" items="${sessionScope.cart}">
+
+                                    <div id="Cart_Container" class="row align-items-center justify-content-between">
+                                        <img class="cart-img" src="imageAssets/${item.img}">
+                                        <p>${item.name}</p>
+                                        <p>${item.price}</p>
+                                    </div>
+
+                                </c:forEach>
+
                                 <a href="PaymentMethods.jsp"><button type="button" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Checkout</button></a>
                             </div>
                         </div>

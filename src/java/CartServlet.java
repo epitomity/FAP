@@ -27,71 +27,71 @@ public class CartServlet extends HttpServlet {
 
         super.init(config);
 
-        Product p1 = new Product();
-        p1.setId("P1");
+        p1 = new Product();
+        p1.setName("Ethereal<br>Eau De Parfum<br>(60ml)");
         p1.setQty(0);
         p1.setPrice(350);
         p1.setImg("Parfum-Ethereal.png");
 
-        Product p2 = new Product();
-        p1.setId("P2");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        p2 = new Product();
+        p2.setName("Autumn Bloom<br>Eau De Parfum<br>(60ml)");
+        p2.setQty(0);
+        p2.setPrice(350);
+        p2.setImg("Parfum-Autumn-Bloom.png");
 
-        Product p3 = new Product();
-        p1.setId("P3");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        p3 = new Product();
+        p3.setName("Amber Wood<br>Eau De Parfum<br>(60ml)");
+        p3.setQty(0);
+        p3.setPrice(350);
+        p3.setImg("Parfum-Amber-Wood.png");
 
-        Product p4 = new Product();
-        p1.setId("P1");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        p4 = new Product();
+        p4.setName("Rendezvous<br>Eau De Parfum<br>(60ml)");
+        p4.setQty(0);
+        p4.setPrice(350);
+        p4.setImg("Parfum-Rendezvous.png");
 
-        Product p5 = new Product();
-        p1.setId("P1");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        p5 = new Product();
+        p5.setName("Green Tea Lush<br>Eau De Parfum<br>(60ml)");
+        p5.setQty(0);
+        p5.setPrice(350);
+        p5.setImg("Parfum-Green-Tea-Lush.png");
 
-        Product rl1 = new Product();
-        p1.setId("RL1");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        rl1 = new Product();
+        rl1.setName("Autumn Bloom<br>Room & Linen Spray<br>(200ml)");
+        rl1.setQty(0);
+        rl1.setPrice(300);
+        rl1.setImg("Room-Spray-Autumn-Bloom.png");
 
-        Product rl2 = new Product();
-        p1.setId("RL1");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        rl2 = new Product();
+        rl2.setName("Amber Wood<br>Room & Linen Spray<br>(200ml)");
+        rl2.setQty(0);
+        rl2.setPrice(300);
+        rl2.setImg("Amber-Wood.png");
 
-        Product rl3 = new Product();
-        p1.setId("RL1");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        rl3 = new Product();
+        rl3.setName("Rendezvous<br>Room & Linen Spray<br>(200ml)");
+        rl3.setQty(0);
+        rl3.setPrice(300);
+        rl3.setImg("Room-Spray-Rendezvous.png");
 
-        Product rl4 = new Product();
-        p1.setId("RL1");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        rl4 = new Product();
+        rl4.setName("Green Tea Lush<br>Room & Linen Spray<br>(200ml)");
+        rl4.setQty(0);
+        rl4.setPrice(300);
+        rl4.setImg("Room-Spray-Green-Tea-Lush.png");
 
-        Product rl5 = new Product();
-        p1.setId("RL1");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        rl5 = new Product();
+        rl5.setName("Peach Blossom<br>Room & Linen Spray<br>(200ml)");
+        rl5.setQty(0);
+        rl5.setPrice(300);
+        rl5.setImg("Room-Spray-Peach-Blossom.png");
 
-        Product rl6 = new Product();
-        p1.setId("RL1");
-        p1.setQty(0);
-        p1.setPrice(350);
-        p1.setImg("Parfum-Ethereal.png");
+        rl6 = new Product();
+        rl6.setName("White Tea & Sage<br>Room & Linen Spray<br>(200ml)");
+        rl6.setQty(0);
+        rl6.setPrice(300);
+        rl6.setImg("Room-Spray-White-Tea-_-Sage.png");
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -100,6 +100,7 @@ public class CartServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
         List<Product> Cart = (List) session.getAttribute("cart");
+        System.out.println("i am in process request");
 
         switch (action) {
             case "P1":
@@ -109,42 +110,101 @@ public class CartServlet extends HttpServlet {
                 Cart.add(p1);
                 System.out.println(Cart);
                 session.setAttribute("cart", Cart);
-
+                response.sendRedirect("LandingPage.jsp");
                 break;
-        }
+
+                //NOT YET IMPLEMENTED
             case "P2":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "P3":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "P4":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "P5":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "RL1":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "RL2":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "RL3":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "RL4":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "RL5":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
             case "RL6":
-                System.out.println("tite");
+                if (Cart.contains(p1)) {
+                    p1.addQty();
+                }
+                Cart.add(p1);
+                System.out.println(Cart);
+                session.setAttribute("cart", Cart);
+                response.sendRedirect("LandingPage.jsp");
                 break;
-
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -157,7 +217,7 @@ public class CartServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-        protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -171,7 +231,7 @@ public class CartServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-        protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -182,7 +242,7 @@ public class CartServlet extends HttpServlet {
      * @return a String containing servlet description
      */
     @Override
-        public String getServletInfo() {
+    public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 

@@ -99,7 +99,7 @@ public class LoginServlet extends HttpServlet {
                     person.setUsername(result.getString("username"));
 
                     HttpSession session = request.getSession();
-                    
+
                     List<Product> cart = new ArrayList<Product>();
                     session.setAttribute("cart", cart);
                     session.setAttribute("person", person);
