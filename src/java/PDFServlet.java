@@ -188,15 +188,17 @@ public class PDFServlet extends HttpServlet {
                 doc.add(Chunk.NEWLINE);
 
                 //Get result set using a sql statement
-                ResultSet rs = stmt.executeQuery("select nameofproduct,stocknumber from APP.PRODUCTSTOCK");
+                ResultSet rs = stmt.executeQuery("select nameofproduct,stocknumber,productsold from APP.PRODUCTSTOCK");
 
                 //Create table with 3 columns
-                PdfPTable my_report_table = new PdfPTable(2);
+                PdfPTable my_report_table = new PdfPTable(3);
 
                 //Create a table header
                 PdfPCell table_cell = new PdfPCell(new Phrase("Product Code"));
                 my_report_table.addCell(table_cell);
                 table_cell = new PdfPCell(new Phrase("Current Stock"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("Products Sold"));
                 my_report_table.addCell(table_cell);
 
                 //Inputs data
@@ -208,6 +210,10 @@ public class PDFServlet extends HttpServlet {
 
                     String stocknumber = rs.getString("stocknumber");
                     table_cell = new PdfPCell(new Phrase(stocknumber));
+                    my_report_table.addCell(table_cell);
+
+                    String productsold = rs.getString("productsold");
+                    table_cell = new PdfPCell(new Phrase(productsold));
                     my_report_table.addCell(table_cell);
 
                 }
@@ -323,7 +329,113 @@ public class PDFServlet extends HttpServlet {
                 }
                 doc.add(new Paragraph("Total: ₱" + total));
                 doc.add(Chunk.NEWLINE);
-                
+
+                //Attach report table to PDF
+                doc.add(my_report_table);
+                doc.close();
+            } else if (action.equals("purchases")) {
+
+                //Create an instance of the PdfWriter using the output stream
+                PdfWriter writer = PdfWriter.getInstance(doc, os);
+
+                //Create new HeaderFooterPageEvent for the header and footer
+                HeaderFooterPageEvent event = new HeaderFooterPageEvent();
+                writer.setPageEvent(event);
+
+                //Document formatting
+                doc.setPageSize(PageSize.LETTER.rotate());
+                doc.open();
+
+                //Add information
+                doc.add(new Paragraph("Currently logged in as: " + username));
+                doc.add(new Paragraph("User Database as of: " + strDate));
+                doc.add(Chunk.NEWLINE);
+
+                //Get result set using a sql statement
+                ResultSet rs = stmt.executeQuery("select * from APP.PURCHASES");
+
+                //Create table with 3 columns
+                PdfPTable my_report_table = new PdfPTable(12);
+
+                //Create a table header
+                PdfPCell table_cell = new PdfPCell(new Phrase("Username"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("P1"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("P2"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("P3"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("P4"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("P5"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("RL1"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("RL2"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("RL3"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("RL4"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("RL5"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("RL6"));
+                my_report_table.addCell(table_cell);
+
+                //Inputs data
+                while (rs.next()) {
+
+                    String usernameDB = rs.getString("username");
+                    table_cell = new PdfPCell(new Phrase(usernameDB));
+                    my_report_table.addCell(table_cell);
+
+                    String temp = rs.getString("P1");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+
+                    temp = rs.getString("P2");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+                    
+                    temp = rs.getString("P3");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+                    
+                    temp = rs.getString("P4");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+                    
+                    temp = rs.getString("P5");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+                    
+                    temp = rs.getString("RL1");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+
+                    temp = rs.getString("RL2");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+                    
+                    temp = rs.getString("RL3");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+                    
+                    temp = rs.getString("RL4");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+                    
+                    temp = rs.getString("RL5");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+                    
+                    temp = rs.getString("RL6");
+                    table_cell = new PdfPCell(new Phrase(temp));
+                    my_report_table.addCell(table_cell);
+
+                }
+
                 //Attach report table to PDF
                 doc.add(my_report_table);
                 doc.close();

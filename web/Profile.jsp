@@ -124,6 +124,11 @@
                         <h1>User Database PDF</h1>
                         <button id="UserDB_PDF" type="submit" name="action" value="users" class="btn btn-dark"${sessionScope.person.role eq 'admin' ? '' : 'disabled' }>Download</button>
                     </div>
+                    
+                    <div class="pdf-download">
+                        <h1>Purchases PDF</h1>
+                        <button id="UserDB_PDF" type="submit" name="action" value="purchases" class="btn btn-dark"${sessionScope.person.role eq 'admin' ? '' : 'disabled' }>Download</button>
+                    </div>
 
                 </form>
             </div>
