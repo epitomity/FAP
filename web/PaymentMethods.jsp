@@ -32,10 +32,10 @@
         <ul id="Header" class="nav container-fluid align-items-center fixed-top m-0 p-0">
             <div id="Header_Left" class="row">
                 <li class="nav-item">
-                    <a class="nav-link " href="LandingPage.jsp">Products</a>
+                    <a class="nav-link " href="LandingPage.jsp#Products">Products</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="LandingPage.jsp">Reviews</a>
+                    <a class="nav-link" href="LandingPage.jsp#Reviews">Reviews</a>
                 </li>
             </div>
 
@@ -45,10 +45,10 @@
 
             <div id="Header_Right" class="row">
                 <li class="nav-item">
-                    <button class="nav-link header_button" data-toggle="modal" data-target="#LoginModal">Login</button>
+                    <a class="nav-link header_button" href="Profile.jsp">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link header_button" data-toggle="modal" data-target="#CartModal">Cart</button>
+                    <a class="nav-link header_button" href="#PaymentCart">Cart</a>
                 </li>
             </div>
         </ul>
@@ -198,7 +198,7 @@
 
                     <hr class="my-4">
                     <div class ="ButtonsPayment">
-                        <button type="submit" class="btn btn-primary Login_Signup_Button" style="background-color:#f7f6ee; color:black; ">&lt; Continue Shopping</button>
+                        <a href="LandingPage.jsp#Products" class="btn btn-primary Login_Signup_Button" style="background-color:#f7f6ee; color:black; ">&lt; Continue Shopping</a>
                         <button type="submit" class="btn btn-primary Login_Signup_Button" style="width: 11rem;">Checkout</button>
                     </div>
                 </form>
@@ -214,12 +214,13 @@
                     <c:forEach var="item" items="${sessionScope.cart}">
                         <c:set var="total" value="${total + item.price * item.qty }">
                         </c:set>
-                        <form action="CartServlet" method="get" class="list-group-item d-flex justify-content-between lh-sm">
+                        <form id="Cart_Payment_Container" action="CartServlet" method="get" class="list-group-item d-flex justify-content-between align-items-center lh-sm">
                             <div>
                                 <h6 class="my-0">${item.name}</h6>
-                                <small class="text-muted">${item.qty}</small>
+
                             </div>
                             <button type="submit" class="btn btn-primary" name="action" value="add${item.id}">+</button>
+                            <p>${item.qty}</p>
                             <button type="submit" class="btn btn-primary" name="action" value="sub${item.id}">-</button>
                             <span class="text-muted">${item.price * item.qty}</span>
                         </form>
@@ -230,86 +231,9 @@
                         <span>Total</span>
                         <strong>${total}</strong>
                     </li>
-                </ul>    
+                </ul>  
+                <a href="LandingPage.jsp#Products" class="btn btn-primary Login_Signup_Button" style="background-color:#FFFFFF; color:black; ">&lt; Continue Shopping</a>
             </div>
         </div> 
-
-        <div>
-            <!-- Login Modal -->
-            <div class="modal right fade" id="LoginModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <h1 class="text-center LoginSignUpHeader">Login</h1>
-                            <form action="LoginServlet" method="post" id="login-form">
-                                <div class="form-group">
-                                    <label for="Username_Input_Login">Username</label>
-                                    <input type="text" class="form-control" name="username" id="Username_Input_Login">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Password_Input_Login">Password</label>
-                                    <input type="password" class="form-control" name="password" id="Password_Input_Login">
-                                </div>
-                                <div class="d-flex flex-column justify-content-center mt-5">
-                                    <a id="Login_Signup" class="text-center mb-3 text-decoration-none" data-dismiss="modal" data-toggle="modal" href="#SignupModal">Create Account</a>
-                                    <button type="submit" id="Login_Submit" class="btn btn-primary Login_Signup_Button">Submit</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                    <!-- modal-content -->
-                </div>
-                <!-- modal-dialog -->
-            </div>
-            <!-- modal -->
-        </div>
-
-        <div>
-            <!-- Sign Up Modal -->
-            <div class="modal right fade" id="SignupModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <h1 class="text-center LoginSignUpHeader">Sign Up</h1>
-                            <form action="SignupServlet" method="post">
-                                <div class="form-group">
-                                    <label for="Username_Input_Signup">Username</label>
-                                    <input type="text" class="form-control" id="Username_Input_Signup" name="username">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Email_Input_Signup">Email</label>
-                                    <input type="email" class="form-control" id="Email_Input_Signup"name="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Password_Input_Signup">Password</label>
-                                    <input type="text" class="form-control" id="Password_Input_Signup"name="password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="ConfirmPassword_Signup">Confirm Password</label>
-                                    <input type="text" class="form-control" id="ConfirmPassword_Signup"name="repeatpassword">
-                                </div>
-                                <!-- Captcha -->
-                                <div class="d-flex justify-content-center mt-2">
-                                    <img src="/FAP/captchaImg" class="rounded mr-2" />
-                                    <div class="form-label-group">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="Captcha_Signup" style="margin-top:1rem;" name="answer" placeholder="What is being shown above?">
-                                </div>
-                                <div class="d-flex flex-column justify-content-center mt-5">
-                                    <button type="submit" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Submit</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                    <!-- modal-content -->
-                </div>
-                <!-- modal-dialog -->
-            </div>
-            <!-- modal -->
-        </div>
     </body>
 </html>

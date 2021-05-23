@@ -45,9 +45,21 @@
                 </li>
 
                 <div id="Header_Right" class="row">
-                    <li class="nav-item">
-                        <button class="nav-link header_button" data-toggle="modal" data-target="#LoginModal">Login</button>
-                    </li>
+
+                    <c:set var="username" value="${sessionScope.username}"/>
+                    <c:choose>
+                        <c:when test="${username != null}">
+                            <li class="nav-item">
+                                <a class="nav-link header_button" href="Profile.jsp">Profile</a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="nav-item">
+                                <button class="nav-link header_button" data-toggle="modal" data-target="#LoginModal">Login</button>
+                            </li>
+                        </c:otherwise>    
+                    </c:choose>
+
                     <li class="nav-item">
                         <button class="nav-link header_button" data-toggle="modal" data-target="#CartModal">Cart</button>
                     </li>
@@ -458,22 +470,31 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <h1 id="Cart_Header">Your Cart</h1>
-                            <div class="modal-body col text-center">
-                                
-                                <c:forEach var="item" items="${sessionScope.cart}">
+                            <div id="Cart_Body" class="modal-body col text-center">
 
+                                <c:forEach var="item" items="${sessionScope.cart}">
                                     <form action="CartServlet" method="get" id="Cart_Container" class="row align-items-center justify-content-between">
-                                        <img class="cart-img" src="imageAssets/${item.img}">
+                                        <div id="Cart_Img_Container">
+                                            <img class="cart-img" src="imageAssets/${item.img}">
+                                        </div>
                                         <p>${item.name}</p>
                                         <button type="submit" class="btn btn-primary" name="action" value="add${item.id}">+</button>
                                         <p>${item.qty}</p>
                                         <button type="submit" class="btn btn-primary" name="action" value="sub${item.id}">-</button>
-                                        <p>${item.price}</p>
+                                        <p>₱ ${item.qty * item.price}</p>
                                     </form>
 
                                 </c:forEach>
+                                <c:set var="username" value="${sessionScope.username}"/>
+                                <c:choose>
+                                    <c:when test="${username != null}">
+                                        <a href="PaymentMethods.jsp"><button type="button" id="Signup_Button" class="btn btn-primary Login_Signup_Button cart-button">Checkout</button></a>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <button class="nav-link header_button cart-button" data-dismiss="modal" data-toggle="modal" data-target="#LoginModal">You need to be logged in to checkout.</button>
+                                    </c:otherwise>    
+                                </c:choose>
 
-                                <a href="PaymentMethods.jsp"><button type="button" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Checkout</button></a>
                             </div>
                         </div>
                         <!-- modal-content -->

@@ -722,8 +722,14 @@ h6 {
     color: #919aa3 !important
 }
 
+#Cart_Body{
+    padding: 20px;
+    padding-top: 0px;
+}
+
 .cart-img{
-    width: 40px;
+    width: 30px;
+    padding: 10px 0px 10px 0px;
 }
 
 #Cart_Header{
@@ -733,9 +739,52 @@ h6 {
 }
 
 #Cart_Container{
-    margin: 0px 10px 0px 10px;
+    margin: 15px 10px 15px 10px;
 }
 
 #Cart_Container p{
+    font-family: Open Sans;
+    font-size: 12px;
     text-align: left;
+    margin: 0px;
+}
+
+#Cart_Container button{
+    font-family: Open Sans;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+    height: min-content;
+    padding: 0px 10px 0px 10px;
+    background-color: var(--black);
+    border: none;
+}
+
+#Cart_Img_Container{
+    width: 100px;
+    height: 110px;
+    background-color: var(--light_brown);
+}
+
+.cart-button{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#Cart_Payment_Container{
+    font-family: Open Sans;
+}
+
+#Cart_Payment_Container p{
+    margin: 0px;
+}
+
+#Cart_Payment_Container button{
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+    height: min-content;
+    padding: 0px 10px 0px 10px;
+    background-color: var(--black);
+    border: none;
 }

@@ -1,6 +1,7 @@
 
 import java.io.IOException;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -109,6 +110,14 @@ public class CartServlet extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession();
+        
+        if (session.getAttribute("username") == null) {
+            String errorMessage = "You need to be logged in to add items to your cart!";
+            request.setAttribute("errorMessage", errorMessage);
+            RequestDispatcher rd = request.getRequestDispatcher("/Error.jsp");
+            rd.forward(request, response);
+        }
+
         String action = request.getParameter("action");
         List<Product> Cart = (List) session.getAttribute("cart");
 
