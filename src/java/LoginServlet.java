@@ -13,7 +13,8 @@ public class LoginServlet extends HttpServlet {
     Connection conn = null;
     String user = null;
     String pass = null;
-
+    int postalcode;
+    String postalCode;
     //Initialization
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -100,7 +101,14 @@ public class LoginServlet extends HttpServlet {
                     person.setCompany(result.getString("company"));
                     person.setCountry(result.getString("country"));
                     person.setRegion(result.getString("region"));
-                    person.setPostalCode(result.getInt("postalCode"));
+                    postalcode = result.getInt("PostalCode");
+                    if(postalcode == 0){
+                    person.setPostalcode(postalCode);
+                    }
+                    else{
+                        
+                    person.setPostalcode(""+postalcode);
+                    }
                     person.setAddress(result.getString("address"));
                     person.setUsername(result.getString("username"));
 

@@ -95,7 +95,7 @@
                             <p>First Name: ${person.firstName}</p>
                             <p>Company: ${person.company}</p>
                             <p>Address: ${person.address}</p>
-                            <p>Postal Code: ${person.postalCode} </p>
+                            <p>Postal Code: ${person.postalcode} </p>
 
                         </div>
 
@@ -114,12 +114,12 @@
 
                     <div class="pdf-download">
                         <h1>Inventory PDF</h1>
-                        <button id="Inventory_PDF" type="submit" name="action" value="inventory" class="btn btn-dark">Download</button>
+                        <button id="Inventory_PDF" type="submit" name="action" value="inventory" class="btn btn-dark"${sessionScope.person.role eq 'admin' ? '' : 'disabled' }>Download</button>
                     </div>
 
                     <div class="pdf-download">
                         <h1>User Database PDF</h1>
-                        <button id="UserDB_PDF" type="submit" name="action" value="users" class="btn btn-dark">Download</button>
+                        <button id="UserDB_PDF" type="submit" name="action" value="users" class="btn btn-dark"${sessionScope.person.role eq 'admin' ? '' : 'disabled' }>Download</button>
                     </div>
 
                 </form>

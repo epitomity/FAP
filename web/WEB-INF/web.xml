@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <!-- Session Config -->
-    
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/CheckoutServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <!-- Session Config End -->
-    
     <!-- Welcome File -->
     <welcome-file-list>
         <welcome-file>LandingPage.jsp</welcome-file>
     </welcome-file-list>
     <!-- Welcome File End -->
-    
     <!-- Servlets -->
-    
     <!-- Login Servlet -->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
@@ -133,18 +133,52 @@
         <multipart-config>
         </multipart-config>
     </servlet>
-    
     <!-- Cart Servlet -->
     <servlet>
         <servlet-name>CartServlet</servlet-name>
         <servlet-class>CartServlet</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>CheckoutServlet</servlet-class>
+        <!-- Database Driver -->
+        <init-param>
+            <param-name>jdbcClassName</param-name>
+            <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+        </init-param>
+        <!-- Database Username -->
+        <init-param>
+            <param-name>dbUserName</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        <!-- Database Password -->
+        <init-param>
+            <param-name>dbPassword</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        <!-- Database URL -->
+        <init-param>
+            <param-name>jdbcDriverURL</param-name>
+            <param-value>jdbc:derby</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbHostName</param-name>
+            <param-value>localhost</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbPort</param-name>
+            <param-value>1527</param-value>
+        </init-param>
+        <init-param>
+            <param-name>databaseName</param-name>
+            <param-value>LuvamineDB</param-value>
+        </init-param>
+        <!-- Database URL -->
+    </servlet>
     <servlet-mapping>
         <servlet-name>CartServlet</servlet-name>
         <url-pattern>/CartServlet</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>PDFServlet</servlet-name>
         <url-pattern>/PDFServlet</url-pattern>

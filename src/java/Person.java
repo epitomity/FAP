@@ -21,6 +21,8 @@ public class Person {
     private int postalCode;
     private String region;
     private String country;
+    private String postalcode;
+
 
     public void setUsername(String username) {
         this.username = username;
@@ -56,6 +58,9 @@ public class Person {
 
     public void setPostalCode(int postalCode) {
         this.postalCode = postalCode;
+    }
+    public void setPostalcode(String postalcode) {
+        this.postalcode = postalcode;
     }
 
     public void setRegion(String region) {
@@ -100,6 +105,9 @@ public class Person {
 
     public int getPostalCode() {
         return postalCode;
+    }
+    public String getPostalcode() {
+        return postalcode;
     }
 
     public String getRegion() {

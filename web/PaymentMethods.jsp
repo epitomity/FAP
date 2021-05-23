@@ -21,7 +21,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
         <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css" />
         <link href="Payment.css" rel="stylesheet" type="text/css"/>
 
@@ -56,11 +55,11 @@
         <div class="row g-5" id="PaymentDetails">
             <div class="col-md-7 col-lg-8" id="PaymentInformation">
                 <h4 class="mb-3">Contact Information</h4>
-                <form class="needs-validation" novalidate="">
+                <form class="needs-validation" action="CheckoutServlet" method="post" novalidate="">
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="firstName" class="form-label"> </label>
-                            <input type="text" class="form-control" id="firstName" placeholder="First Name" value="" required="">
+                            <input type="text" class="form-control" id="firstName" name="firstname" placeholder="First Name" value="" required="">
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -68,7 +67,7 @@
 
                         <div class="col-sm-6">
                             <label for="lastName" class="form-label"> </label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Last Name" value="" required="">
+                            <input type="text" class="form-control" id="lastName" name = "lastname" placeholder="Last Name" value="" required="">
                             <div class="invalid-feedback">
                                 Valid last name is required.
                             </div>
@@ -76,13 +75,13 @@
 
                         <div class="col-12">
                             <label for="Company" class="form-label"></label>
-                            <input type="text" class="form-control" id="Company" placeholder="Company (Optional)">
+                            <input type="text" class="form-control" id="Company" name="company" placeholder="Company (Optional)">
 
                         </div>
 
                         <div class="col-12">
                             <label for="email" class="form-label"></label>
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required="">
                             <div class="invalid-feedback">
                                 Please enter a valid email address for shipping updates.
                             </div>
@@ -90,7 +89,7 @@
 
                         <div class="col-12">
                             <label for="address" class="form-label"></label>
-                            <input type="text" class="form-control" id="address" placeholder="Address" required="">
+                            <input type="text" class="form-control" id="address" name ="address" placeholder="Address" required="">
                             <div class="invalid-feedback">
                                 Please enter your shipping address.
                             </div>
@@ -103,7 +102,7 @@
 
                         <div class="col-md-5" style="padding-top: 2rem;">
                             <label for="country" class="form-label"></label>
-                            <select class="form-select" id="country" required=""style="background-color:#f7f6ee; width: 98%; border-color:#f7f6ee;">
+                            <select class="form-select" id="country" name="country" required=""style="background-color:#f7f6ee; width: 98%; border-color:#f7f6ee;">
                                 <option value="" disabled selected>Country</option>
                                 <option>Philippines</option>
                             </select>
@@ -114,7 +113,7 @@
 
                         <div class="col-md-4" style="padding-top: 2rem;">
                             <label for="state" class="form-label"></label>
-                            <select class="form-select" id="Region" required="" style="background-color:#f7f6ee; width: 98%; border-color:#f7f6ee;">
+                            <select class="form-select" id="Region" name="region" required="" style="background-color:#f7f6ee; width: 98%; border-color:#f7f6ee;">
                                 <option value="" disabled selected>Region</option>
                                 <option>NCR</option>
                             </select>
@@ -125,7 +124,7 @@
 
                         <div class="col-md-3">
                             <label for="zip" class="form-label"></label>
-                            <input type="text" class="form-control" id="zip" placeholder="Postal" required="">
+                            <input type="text" class="form-control" id="zip" name="postalcode" placeholder="Postal" required="">
                             <div class="invalid-feedback">
                                 Postal code required.
                             </div>
@@ -198,10 +197,30 @@
 
                     <hr class="my-4">
                     <div class ="ButtonsPayment">
-                        <button type="submit" class="btn btn-primary Login_Signup_Button" style="background-color:#f7f6ee; color:black; ">&lt; Continue Shopping</button>
-                        <button type="submit" class="btn btn-primary Login_Signup_Button" style="width: 11rem;">Checkout</button>
+                        <a class="btn btn-primary Login_Signup_Button" href="LandingPage.jsp#Products" style="background-color:#f7f6ee; color:black;">&lt; Continue Shopping</a>
+                        <button type="submit" class="btn btn-primary Login_Signup_Button" name="Choice" value="Checkout" style="width: 11rem;">Checkout</button>
                     </div>
                 </form>
+                <script>
+                    //  disabling form submissions if there are invalid fields
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
             </div>
             <div class="col-md-5 col-lg-4 order-md-last" id="PaymentCart">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
