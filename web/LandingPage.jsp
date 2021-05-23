@@ -94,7 +94,7 @@
                                     </button>
                                 </div>
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="RL1">
                                         <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Autumn-Bloom.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -108,7 +108,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="P2">
                                         <img class="Product_Image parfum" src="imageAssets/Parfum-Autumn-Bloom.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -117,7 +117,7 @@
 
                                 </div>
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="RL2">
                                         <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Amber-Wood.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -131,7 +131,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="P3">
                                         <img class="Product_Image parfum" src="imageAssets/Parfum-Amber-Wood.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -140,7 +140,7 @@
 
                                 </div>
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="RL3">
                                         <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Rendezvous.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -154,7 +154,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="P4">
                                         <img class="Product_Image parfum" src="imageAssets/Parfum-Rendezvous.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -163,7 +163,7 @@
 
                                 </div>
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="RL4">
                                         <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Green-Tea-Lush.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -177,7 +177,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="P5">
                                         <img class="Product_Image parfum" src="imageAssets/Parfum-Green-Tea-Lush.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -186,7 +186,7 @@
 
                                 </div>
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="RL5">
                                         <img class="Product_Image room-spray" src="imageAssets/Room-Spray-Peach-Blossom.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -200,7 +200,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col product-container" align="center">
-                                    <button class="bg-product product-img-container">
+                                    <button class="bg-product product-img-container" name="action" value="RL6">
                                         <img class="Product_Image room-spray" src="imageAssets/Room-Spray-White-Tea-_-Sage.png">
                                         <div class="overlay"></div>
                                         <p id="Add_to_Cart">Add to Cart</p>
@@ -462,11 +462,14 @@
                                 
                                 <c:forEach var="item" items="${sessionScope.cart}">
 
-                                    <div id="Cart_Container" class="row align-items-center justify-content-between">
+                                    <form action="CartServlet" method="get" id="Cart_Container" class="row align-items-center justify-content-between">
                                         <img class="cart-img" src="imageAssets/${item.img}">
                                         <p>${item.name}</p>
+                                        <button type="submit" class="btn btn-primary" name="action" value="add${item.id}">+</button>
+                                        <p>${item.qty}</p>
+                                        <button type="submit" class="btn btn-primary" name="action" value="sub${item.id}">-</button>
                                         <p>${item.price}</p>
-                                    </div>
+                                    </form>
 
                                 </c:forEach>
 

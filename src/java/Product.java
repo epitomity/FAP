@@ -45,7 +45,7 @@ public class Product {
         this.qty++;
     }
     
-    public void minusQty() {
+    public void subQty() {
         this.qty--;
     }
 

@@ -14,6 +14,7 @@ public class LogoutServlet extends HttpServlet {
         //Destroys associates attributes
         s.removeAttribute("username");
         s.removeAttribute("person");
+        s.removeAttribute("cart");
         
         //Destroys the session
         s.invalidate();

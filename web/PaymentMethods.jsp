@@ -4,6 +4,7 @@
 
     <head>
 
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
         <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -206,32 +207,28 @@
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span>Your cart</span>
                 </h4>
+
                 <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">Product name</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">Second product</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$8</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">Third item</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$5</span>
-                    </li>
+                    <c:set var="total" value="0">
+                    </c:set>
+                    <c:forEach var="item" items="${sessionScope.cart}">
+                        <c:set var="total" value="${total + item.price * item.qty }">
+                        </c:set>
+                        <form action="CartServlet" method="get" class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">${item.name}</h6>
+                                <small class="text-muted">${item.qty}</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary" name="action" value="add${item.id}">+</button>
+                            <button type="submit" class="btn btn-primary" name="action" value="sub${item.id}">-</button>
+                            <span class="text-muted">${item.price * item.qty}</span>
+                        </form>
+
+                    </c:forEach>
 
                     <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (USD)</span>
-                        <strong>$20</strong>
+                        <span>Total</span>
+                        <strong>${total}</strong>
                     </li>
                 </ul>    
             </div>
