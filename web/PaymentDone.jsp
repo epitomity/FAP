@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
     <head>
         <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,6 +17,21 @@
         <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css" />
         <link href="Payment.css" rel="stylesheet" type="text/css"/>
 
+        <%
+            //Cache Control
+            response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");//HTTP 1.1
+            response.setDateHeader("Expires", 0); //Causes the proxy cache to see the page as "stale"
+            response.setHeader("Pragma", "no-cache"); //HTTP 1.0 backward compatibility
+
+            //Illegal Session Handling
+            String user = (String) session.getAttribute("username");
+            if (null == user) {
+                String errorMessage = "You don't have access to this page.";
+                request.setAttribute("errorMessage", errorMessage);
+                getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
+            }
+        %>
+
     </head>
     <body>
         <div id="Payment Done" class="container-fluid flex-column justify-content-center">
@@ -23,10 +39,10 @@
             <ul id="Header" class="nav container-fluid align-items-center fixed-top m-0 p-0">
                 <div id="Header_Left" class="row">
                     <li class="nav-item">
-                        <a class="nav-link " href="LandingPage.jsp">Products</a>
+                        <a class="nav-link " href="LandingPage.jsp#Products">Products</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="LandingPage.jsp">Reviews</a>
+                        <a class="nav-link" href="LandingPage.jsp#Reviews">Reviews</a>
                     </li>
                 </div>
 
@@ -36,7 +52,7 @@
 
                 <div id="Header_Right" class="row">
                     <li class="nav-item">
-                        <button class="nav-link header_button" data-toggle="modal" data-target="#LoginModal">Login</button>
+                        <a class="nav-link header_button" href="Profile.jsp">Profile</a>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link header_button" data-toggle="modal" data-target="#CartModal">Cart</button>
@@ -60,78 +76,41 @@
             </form>
 
             <p class="OtherTextThankYou mt-4">Visit your account page at any time to check the status of your order, order history, and payment details</p>
-            <div><button type="submit" id="profile" class="btn btn-primary Login_Signup_Button">Profile</button></div>
+            <div><a href="Profile.jsp" id="profile" class="btn btn-primary Login_Signup_Button">Profile</a></div>
 
-        </div>
-        <div>
-            <!-- Login Modal -->
-            <div class="modal right fade" id="LoginModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <h1 class="text-center LoginSignUpHeader">Login</h1>
-                            <form action="LoginServlet" method="post" id="login-form">
-                                <div class="form-group">
-                                    <label for="Username_Input_Login">Username</label>
-                                    <input type="text" class="form-control" name="username" id="Username_Input_Login">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Password_Input_Login">Password</label>
-                                    <input type="password" class="form-control" name="password" id="Password_Input_Login">
-                                </div>
-                                <div class="d-flex flex-column justify-content-center mt-5">
-                                    <a id="Login_Signup" class="text-center mb-3 text-decoration-none" data-dismiss="modal" data-toggle="modal" href="#SignupModal">Create Account</a>
-                                    <button type="submit" id="Login_Submit" class="btn btn-primary Login_Signup_Button">Submit</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                    <!-- modal-content -->
-                </div>
-                <!-- modal-dialog -->
-            </div>
-            <!-- modal -->
         </div>
 
         <div>
-            <!-- Sign Up Modal -->
-            <div class="modal right fade" id="SignupModal" tabindex="-1" role="dialog">
+            <!-- Cart Modal -->
+            <div class="modal right fade" id="CartModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-body">
-                            <h1 class="text-center LoginSignUpHeader">Sign Up</h1>
-                            <form action="SignupServlet" method="post">
-                                <div class="form-group">
-                                    <label for="Username_Input_Signup">Username</label>
-                                    <input type="text" class="form-control" id="Username_Input_Signup" name="username">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Email_Input_Signup">Email</label>
-                                    <input type="email" class="form-control" id="Email_Input_Signup"name="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Password_Input_Signup">Password</label>
-                                    <input type="text" class="form-control" id="Password_Input_Signup"name="password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="ConfirmPassword_Signup">Confirm Password</label>
-                                    <input type="text" class="form-control" id="ConfirmPassword_Signup"name="repeatpassword">
-                                </div>
-                                <!-- Captcha -->
-                                <div class="d-flex justify-content-center mt-2">
-                                    <img src="/FAP/captchaImg" class="rounded mr-2" />
-                                    <div class="form-label-group">
+                        <h1 id="Cart_Header">Your Cart</h1>
+                        <div id="Cart_Body" class="modal-body col text-center">
+
+                            <c:forEach var="item" items="${sessionScope.cart}">
+                                <form action="CartServlet" method="get" id="Cart_Container" class="row align-items-center justify-content-between">
+                                    <div id="Cart_Img_Container">
+                                        <img class="cart-img" src="imageAssets/${item.img}">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="Captcha_Signup" style="margin-top:1rem;" name="answer" placeholder="What is being shown above?">
-                                </div>
-                                <div class="d-flex flex-column justify-content-center mt-5">
-                                    <button type="submit" id="Signup_Button" class="btn btn-primary Login_Signup_Button">Submit</button>
-                                </div>
+                                    <p>${item.name}</p>
+                                    <button type="submit" class="btn btn-primary" name="action" value="add${item.id}">+</button>
+                                    <p>${item.qty}</p>
+                                    <button type="submit" class="btn btn-primary" name="action" value="sub${item.id}">-</button>
+                                    <p>₱ ${item.qty * item.price}</p>
+                                </form>
 
-                            </form>
+                            </c:forEach>
+                            <c:set var="username" value="${sessionScope.username}"/>
+                            <c:choose>
+                                <c:when test="${username != null}">
+                                    <a href="PaymentMethods.jsp"><button type="button" id="Signup_Button" class="btn btn-primary Login_Signup_Button cart-button">Checkout</button></a>
+                                </c:when>
+                                <c:otherwise>
+                                    <button class="nav-link header_button cart-button" data-dismiss="modal" data-toggle="modal" data-target="#LoginModal">You need to be logged in to checkout.</button>
+                                </c:otherwise>    
+                            </c:choose>
+
                         </div>
                     </div>
                     <!-- modal-content -->
@@ -140,7 +119,5 @@
             </div>
             <!-- modal -->
         </div>
-
-
     </body>
 </html>

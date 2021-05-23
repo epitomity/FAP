@@ -226,4 +226,9 @@
         <url-pattern>/captchaImg</url-pattern>
     </servlet-mapping>
     <!-- Captcha Servlet End -->
+    
+    <context-param>
+        <param-name>Copyright</param-name>
+        <param-value>&#169; Luvamine</param-value>
+    </context-param>
 </web-app>

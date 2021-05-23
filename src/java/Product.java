@@ -24,7 +24,7 @@ public class Product {
     public void setId(String id) {
         this.id = id;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -40,11 +40,11 @@ public class Product {
     public void setQty(int qty) {
         this.qty = qty;
     }
-    
+
     public void addQty() {
         this.qty++;
     }
-    
+
     public void subQty() {
         this.qty--;
     }
@@ -63,6 +63,16 @@ public class Product {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String[] splitReciept() {
+        String[] s = new String[3];
+
+        s[0] = this.name.replaceAll("<br>", " ");
+        s[1] = "" + this.qty;
+        s[2] = "" + this.qty * this.price;
+        
+        return s;
     }
 
 }

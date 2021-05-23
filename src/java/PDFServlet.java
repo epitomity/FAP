@@ -23,8 +23,7 @@ public class PDFServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
 
         super.init(config);
-       
-        
+
         //Establish Database Connection
         try {
 
@@ -172,7 +171,6 @@ public class PDFServlet extends HttpServlet {
             //Check which button is clicked
             if (action.equals("inventory")) {
 
-                
                 //Create an instance of the PdfWriter using the output stream
                 PdfWriter writer = PdfWriter.getInstance(doc, os);
 
@@ -203,11 +201,11 @@ public class PDFServlet extends HttpServlet {
 
                 //Inputs data
                 while (rs.next()) {
-                    
+
                     String nameofproduct = rs.getString("nameofproduct");
                     table_cell = new PdfPCell(new Phrase(nameofproduct));
                     my_report_table.addCell(table_cell);
-                    
+
                     String stocknumber = rs.getString("stocknumber");
                     table_cell = new PdfPCell(new Phrase(stocknumber));
                     my_report_table.addCell(table_cell);
@@ -252,7 +250,7 @@ public class PDFServlet extends HttpServlet {
 
                 //Inputs data
                 while (rs.next()) {
-                    
+
                     String usernameDB = rs.getString("username");
                     table_cell = new PdfPCell(new Phrase(usernameDB));
                     //Checking for current user
@@ -260,11 +258,11 @@ public class PDFServlet extends HttpServlet {
                         table_cell = new PdfPCell(new Phrase(usernameDB + "*"));
                     }
                     my_report_table.addCell(table_cell);
-                    
+
                     String role = rs.getString("role");
                     table_cell = new PdfPCell(new Phrase(role));
                     my_report_table.addCell(table_cell);
-                    
+
                     String email = rs.getString("email");
                     table_cell = new PdfPCell(new Phrase(email));
                     my_report_table.addCell(table_cell);
@@ -275,7 +273,60 @@ public class PDFServlet extends HttpServlet {
                 doc.add(my_report_table);
                 doc.close();
             } else if (action.equals("receipt")) {
+                //Create an instance of the PdfWriter using the output stream
+                PdfWriter writer = PdfWriter.getInstance(doc, os);
+
+                //Create new HeaderFooterPageEvent for the header and footer
+                HeaderFooterPageEvent event = new HeaderFooterPageEvent();
+                writer.setPageEvent(event);
+
+                //Document formatting
+                doc.setPageSize(PageSize.LETTER.rotate());
+                doc.open();
+
+                //Add information
+                doc.add(new Paragraph("Receipt of user: " + username));
+                doc.add(new Paragraph("Printed on: " + strDate));
+                doc.add(Chunk.NEWLINE);
+
+                HttpSession session = request.getSession();
+                java.util.List<Product> cart = (java.util.List) session.getAttribute("cart");
+
+                //Create table with 3 columns
+                PdfPTable my_report_table = new PdfPTable(3);
+
+                //Create a table header
+                PdfPCell table_cell = new PdfPCell(new Phrase("Name of Product"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("Quantity"));
+                my_report_table.addCell(table_cell);
+                table_cell = new PdfPCell(new Phrase("Price"));
+                my_report_table.addCell(table_cell);
+
+                int total = 0;
+
+                //Inputs data
+                for (Product p : cart) {
+                    String[] s = p.splitReciept();
+
+                    table_cell = new PdfPCell(new Phrase(s[0]));
+                    my_report_table.addCell(table_cell);
+
+                    table_cell = new PdfPCell(new Phrase(s[1]));
+                    my_report_table.addCell(table_cell);
+
+                    table_cell = new PdfPCell(new Phrase(s[2]));
+                    my_report_table.addCell(table_cell);
+
+                    System.out.println(s[2]);
+                    total += Integer.parseInt(s[2]);
+                }
+                doc.add(new Paragraph("Total: ₱" + total));
+                doc.add(Chunk.NEWLINE);
                 
+                //Attach report table to PDF
+                doc.add(my_report_table);
+                doc.close();
             }
         } catch (SQLException e) {
         } catch (DocumentException ex) {
