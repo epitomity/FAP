@@ -117,7 +117,7 @@ public class SignupServlet extends HttpServlet {
                     if (!result.next()) {
                         pstmt2.setString(1, email);
                         pstmt2.setString(2, user);
-                        pstmt2.setString(3, pass);
+                        pstmt2.setString(3, Security.encrypt(pass));
                         pstmt2.executeUpdate();
                         response.sendRedirect("LandingPage.jsp");
                     } else {
