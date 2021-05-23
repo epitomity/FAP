@@ -19,8 +19,7 @@
         <!-- JS library -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
         <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css" />
 
         <%
@@ -70,8 +69,8 @@
             <div id="Profile_Header" class="row align-items-center">
 
                 <div id="Profile_Name_Role" class="col-12 col-sm-10">
-                    <h1>Full Name of Customer</h1>
-                    <h2>Role</h2>
+                    <h1>${person.username}</h1>
+                    <h2>${person.role}</h2>
                 </div>
 
                 <form  action="LogoutServlet" method="post" class="col-12 col-sm-2 text-center">
@@ -86,26 +85,24 @@
 
                     <h1>Payment Details</h1>
                     <h2>Contact Information</h2>
-                    <p>Email: jamiellevelasquez@gmail.com</p>
+                    <p>Email: ${person.email}</p>
                     <h2>Shipping Information</h2>
 
                     <div class="row">
 
                         <div class="col">
 
-                            <p>First Name: Jamielle</p>
-                            <p>Company: University of Santo Tomas</p>
-                            <p>Address: Cedar Crest, Acacia Estates</p>
-                            <p>Postal Code: 1631</p>
-                            <p>Region Metro Manila</p>
+                            <p>First Name: ${person.firstName}</p>
+                            <p>Company: ${person.company}</p>
+                            <p>Address: ${person.address}</p>
+                            <p>Postal Code: ${person.postalCode} </p>
 
                         </div>
 
                         <div class="col">
-                            <p>Last Name: Velasquez</p>
-                            <p>Appartment Number: 221 Hawthron bldg.</p>
-                            <p> City Taguig</p>
-                            <p> Country: Philippines</p>
+                            <p>Last Name: ${person.lastName}</p>
+                            <p> Country: ${person.country}</p>
+                            <p>Region: ${person.region}</p>
 
                         </div>
 

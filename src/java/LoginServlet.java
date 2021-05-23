@@ -90,12 +90,18 @@ public class LoginServlet extends HttpServlet {
                 //Initialize Variables
                 String DBpass = result.getString("password");
                 //Check if passwords match with the encrpyed password stored in the database
-                if (DBpass.equals(Security.encrypt(pass))) {
-
+                if (DBpass.equals(Security.encrypt(pass))) {           
                     //Creates a new Person and associates them to a Session
                     person = new Person();
-
+                    person.setFirstName(result.getString("firstName"));
+                    person.setLastName(result.getString("lastName"));
                     person.setRole(result.getString("role"));
+                    person.setEmail(result.getString("email"));
+                    person.setCompany(result.getString("company"));
+                    person.setCountry(result.getString("country"));
+                    person.setRegion(result.getString("region"));
+                    person.setPostalCode(result.getInt("postalCode"));
+                    person.setAddress(result.getString("address"));
                     person.setUsername(result.getString("username"));
 
                     HttpSession session = request.getSession();

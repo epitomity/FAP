@@ -51,4 +51,16 @@ public class Security {
         //Return the Encrypted Password
         return encryptedString;
     }
+     public static String decrypt(String codeDecrypt) {
+        String decryptedString = null;
+        try {
+            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
+            final SecretKeySpec secretKey = new SecretKeySpec(key, "AES");
+            cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            decryptedString = new String(cipher.doFinal(Base64.decodeBase64(codeDecrypt)));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        return decryptedString;
+    }
 }
